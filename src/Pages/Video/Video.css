@@ -1,0 +1,236 @@
+.v-nav-bg{
+    background-image: linear-gradient(#6047ec, #5139d6) ;
+    height:87px;
+}
+.video-side{
+    width:740px;
+}
+.videoPage{
+    padding-top:60px;
+    margin-left: 50px;
+    margin-right: 50px;
+margin: 0px auto;
+    max-width: 1234px;
+height: 1234px;
+}
+.headline{
+    font-family: system-ui;
+    font-size:29px;
+    font-weight: bold;
+}
+.video-div{
+    background-color:black;
+    height:400px;
+    width:740px;
+    border-radius:10px;
+    margin-top:20px;
+}
+.commentBox{
+    padding: 20px;
+    height: 250px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0px 2px 50px #a4a0a07d;
+    background: white;
+    overflow-y: auto;
+}
+.comment{
+    display:flex;
+}
+.PP{
+    background: black;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+.comment-text-box{
+    background: #e7e7e74d;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+.PN{
+    font-weight: bold;
+    font-family: system-ui;
+}
+.commentPost{
+    background: white;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+#postInput{
+    border-radius: 20px;
+    background-color: #0000003d;
+    width: 627px;
+    height: 40px;
+    border: none;
+    color: rgb(34, 34, 34);
+    padding-left: 10px;
+    margin-right: 5px;
+}
+
+/* btn style */
+
+.post-btn{
+    text-decoration: none;
+    background: linear-gradient(
+50deg, #000cc794, #a300c5, #ff006c);
+    padding-left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    margin-left: 118px;
+    margin-top: 0px;
+    margin-left: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: none;
+    display: inline;
+    padding-right: 20px;
+    padding-bottom: 7px;
+    margin-right: 10px;
+}
+.post-btn:focus{
+    box-shadow:0px 0px 20px #000cc794;
+}
+
+/* video name list  */
+
+.video-name-list{
+margin-left:100px;
+}
+.search-div{
+    height: 79px;
+    background: #ffffff;
+    width: 338px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px 0px 50px #e5e5e5;
+}
+.search-input{
+    border-radius: 5px;
+    width: 305px;
+    height: 41px;
+    padding-left: 10px;
+    margin-left: 17px;
+    margin-top: 19px;
+    border: none;
+    background: #ede8e8;
+}
+.milestone-card-0{
+    margin-top: 20px;
+    width: 338px;
+    border-radius: 10px;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0px 0px 50px #e5e5e5;
+}
+.milestone-card{
+    display: flex;
+    width: 318px;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.milestone-card-headline{
+    font-family: system-ui;
+}
+.milestone-card-btn{
+    margin-left: 90px;
+    background-image: linear-gradient(45deg, #ff0000c4, #ff62b0);
+    color: white;
+    height: 46px;
+    border-radius: 10px;
+    border: none;
+}
+.module-cards{
+    width: 318px;
+    padding: 15px !important;
+    margin-top: 20px;
+    background: #a1a1a145;
+    border-radius: 10px;
+}
+.module-card{
+    text-decoration: none;
+    list-style: none;
+}
+.module-card-videos{
+    list-style: none;
+    margin-top: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+
+/*responsive*/
+@media only screen and (max-width: 480px) {
+
+.videoPage {
+    display: block !important;
+    width: 96%;
+}
+.video-side{
+width: 100%;
+margin-left: 2%;
+margin-right: 2%;
+}
+.headline{
+    font-size: 113%;
+}
+.video-div{
+    width: 96%;
+    height: auto;
+}
+.commentBox{
+    width: 96%;
+}
+.commentPost{
+    background-color: black;
+    width: 96%;
+}
+#postInput{
+    width: 70%;
+    background: #ffffff14;
+}
+.post-btn{
+    margin-right: 0px;
+}
+.video-name-list{
+margin: 0px;
+    margin-top: 38px;
+}
+.search-div{
+width: 96%;
+margin-left: 2%;
+margin-right: 2%;
+}
+.search-input{
+    margin-right: 17px;
+    width: 89%;
+}
+.milestone-card-0{
+    width: 96%;
+margin-left: 2%;
+    margin-right: 2%;
+}
+.milestone-card{
+    width: 100%;
+}
+.milestone-card-btn{
+    margin-left: 22%;
+}
+.module-cards{
+width: 100%;
+}
+
+}

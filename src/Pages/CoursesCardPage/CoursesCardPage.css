@@ -1,0 +1,84 @@
+.CCP-nav-bg{
+    background-image: linear-gradient( 
+293deg, rgb(67 40 217), rgb(93 84 255 / 95%));
+    width: 100%;
+    height: 87px;
+}
+.CCP{
+height:550px;
+max-width:1234px;
+margin:0px auto;
+}
+.CCP > h1{
+font-family: system-ui;
+    font-weight: bold;
+    padding: 45px 20px;
+}
+.name-color{
+color:#5940e2;
+}
+.CCP-card{
+background-color: #ffffff;
+    display: flex;
+    width: 524px;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0px 0px 50px #dbdbdb;
+}
+.CCP-card-img > img{
+height: 133px;
+    width: 200px;
+    background: black;
+    border-radius: 12px;
+}
+.CCP-card-textside{
+padding-left: 20px;
+}
+.CCP-card-textside > h2{
+font-family: system-ui;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1e1e1e;
+    font-weight: bold;
+}
+.CCP-card-textside > h4{
+font-family: system-ui;
+    display: none;
+}
+.CCP-card-textside > button{
+    background: linear-gradient( 
+335.64deg,#ff589b -19.22%,#ff136f 118.87%)!important;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 70px;
+}
+
+
+
+
+/*responsive*/
+@media only screen and (max-width: 480px) {
+
+.CCP > h1{
+    padding: 18px;
+    font-size: 21px;
+}
+.CCP-card{
+display: block;
+    width: 87%;
+}
+.CCP-card-img > img{
+display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.CCP-card-textside{
+    padding-left: 0;
+}
+.CCP-card-textside > h2{
+    margin-top: 12px;
+}
+
+}

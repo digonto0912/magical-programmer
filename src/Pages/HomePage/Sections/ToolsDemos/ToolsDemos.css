@@ -1,0 +1,151 @@
+.courses{
+    margin:50px auto;
+margin-top:220px;
+max-width:1234px;
+}
+.CTD{
+    display: inline-flex;
+gap:63px;
+}
+.CTDD{
+width: 372px;
+}
+.CTime{
+    font-weight: 600;
+    font-size: 15px;
+    color: #000000;
+}
+.CTD > div > h2{
+    font-weight: bold;
+    font-size: 40px;
+    font-family: system-ui;
+    color: black;
+    margin-top: 16px;
+}
+.icons-side-text{
+    width:400px;
+    margin:0px;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 130%;
+    color: black;
+    margin-top: 25px;
+    font-family: system-ui;
+    width: 372px;
+}
+.icons{
+    display:flex;
+    height: 48px;
+    margin-top: 150px;
+    margin-left: 68px;
+}
+.CS-search-input{
+    width: 201px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: linear-gradient(180deg, #70707094, #e5e5e5);
+    color: white;
+    margin-top: 153px;
+    margin-left: 74px;
+    box-shadow: 0px 18px 51px #bfbcbcd6;
+}
+
+/* single icons */
+
+.reactJs{
+    background-color: #01152a;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 53px;
+    margin-left: 20px;
+}
+.tailwind{
+    background-color: #01152a;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 53px;
+    margin-left: 20px;
+}
+.figma{
+    background-color: #000000;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 53px;
+    margin-left: 20px;
+}
+.bootstrap4{
+    background-color: #563d7c;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 53px;
+    margin-left: 20px;
+}
+.materialUi{
+    background-color: #000000;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 53px;
+    margin-left: 20px;
+}
+.mongodb{
+    background-color: #000000;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 53px;
+    margin-left: 20px;
+}
+
+
+/*responsive*/
+@media only screen and (max-width: 480px) {
+
+.courses {
+margin-top: 205px;
+}
+.CTD {
+text-align: center;
+    display: block;
+}
+.CTDD {
+    width: 100%;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.CTD > div > h2 {
+    width: 100%;
+    margin: 0;
+    font-size: 32px;
+}
+.icons-side-text {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 15px;
+}
+.icons {
+    margin: 45px auto;
+    justify-content: center;
+}
+.icons > img {
+    margin-left: 16px;
+}
+.reactJs {
+margin:0;
+}
+.bootstrap4{
+display:none;
+}
+.CS-search-input {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+}

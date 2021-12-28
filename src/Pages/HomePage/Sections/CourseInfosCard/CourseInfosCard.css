@@ -1,0 +1,195 @@
+/*utilites*/
+
+.CIC{
+display: grid;
+    grid-template-columns: 360px auto;
+    gap: 60px;
+    justify-items: center;
+    position: relative;
+    max-width: 1234px;
+    padding: 0px 30px;
+    margin: 300px auto 200px;
+}
+.CIC-text{
+position: relative;
+    display: grid;
+    align-content: start;
+    justify-items: start;
+    gap: 20px;
+    max-width: 360px;
+}
+.CIC-div-headline{
+font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin: 0px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.CIC-text > h1{
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0px;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+}
+.CIC-text > h5{
+font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 130%;
+    margin: 0px;
+    color: rgb(0, 0, 0);
+    font-family: system-ui;
+    margin-top: 10px;
+}
+
+/*btn*/
+.CIC-text > button{
+display: grid;
+    background: linear-gradient(rgba(24, 32, 79, 0.4) 0%, rgba(24, 32, 79, 0.4) 100%);
+    box-shadow: rgb(0 0 0 / 15%) 0px 20px 40px, rgb(0 0 0 / 20%) 0px 0px 0px 0.5px inset;
+    border-radius: 30px;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: white;
+}
+.CIC-text > button:hover{
+transform: translateY(-2px);
+    box-shadow: rgb(0 0 0 / 15%) 0px 20px 40px, rgb(0 0 0 / 30%) 0px 0px 0px 0.5px inset, rgb(0 0 0 / 30%) 0px 10px 40px inset;
+}
+.info-cards{
+display:flex;
+}
+.info-card{
+    position: relative;
+margin-left: 70px;
+}
+.info-up-card{
+position: relative;
+    width: 240px;
+    height: 280px;
+    backdrop-filter: blur(40px);
+    border-radius: 0px 30px 40px 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: rgb(24 32 79 / 25%) 0px 40px 80px, rgb(255 255 255 / 50%) 0px 0px 0px 0.5px inset;
+    z-index: 1;
+}
+.info-up-card:hover{
+box-shadow: rgb(24 32 79 / 25%) 0px 100px 100px, rgb(255 255 255 / 50%) 0px 0px 0px 0.5px inset;
+    transform: translateY(-3px);
+}
+.info-up-card > h3{
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0px;
+    color: rgb(0, 0, 0);
+    font-family: system-ui;
+    margin-top: 10px;
+}
+.info-up-card > h5{
+font-family: system-ui;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 130%;
+    margin: 0px;
+    color: rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+margin-top: 15px;
+}
+.infos{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 32px auto 40px;
+font-size: 13px;
+    margin-top: 14px;
+}
+.info-number{
+display: grid;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    align-items: center;
+}
+.info-lvl{
+width: 40px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 2px 6px;
+    margin: auto 0px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 130%;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui;
+    text-transform: uppercase;
+    display: grid;
+}
+.info-down-card-1st{
+transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+position: absolute;
+    width: 220px;
+    height: 280px;
+    background: linear-gradient(rgb(64, 141, 213) 0%, rgb(99, 11, 140) 100%);
+    border-radius: 0px 40px 40px;
+    transform: skewY( 
+8deg);
+    transform-origin: left top;
+    top: 0px;
+}
+.info-card:hover > .info-down-card-1st{
+transform: skewY(18deg);
+    width: 200px;
+}
+
+/*2nd card*/
+
+.info-down-card-2nd{
+transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+position: absolute;
+    width: 220px;
+    height: 280px;
+    background: linear-gradient(rgb(192, 52, 149) 0%, rgb(76, 36, 214) 100%);
+    border-radius: 0px 40px 40px;
+    transform: skewY(
+8deg);
+    transform-origin: left top;
+    top: 0px;
+}
+
+.info-card:hover > .info-down-card-2nd{
+transform: skewY(18deg);
+    width: 200px;
+}
+
+
+
+
+/*responsive*/
+@media only screen and (max-width: 480px) {
+
+.CIC{
+display:block;
+}
+.info-cards{
+    display:block;
+}
+.info-card{
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+}
