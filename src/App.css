@@ -1,0 +1,7 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+.App{
+    font-family: 'Cabin', sans-serif;
+    background-color: rgb(242, 246, 255);
+}

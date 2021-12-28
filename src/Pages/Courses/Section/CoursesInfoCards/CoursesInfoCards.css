@@ -1,0 +1,192 @@
+.CoursesInfoCards{
+    margin-top:100px;
+    justify-content: center;
+    align-items: center;
+    display:grid;
+}
+.btn-group{
+    width:427px;
+    background-image: linear-gradient(rgb(147, 155, 160), rgb(209, 216, 228));
+    border-radius: 50px;
+    padding:4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-group > button{
+    background-color: rgba(182, 182, 182, 0);
+    border-radius: 50px;
+    border:none;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
+    padding-right:5px;
+    color:white;
+}
+.btn-group > button:focus{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    border:none;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
+    padding-right:5px;
+    color:black;
+}
+
+/* card display */
+#card1{
+    display:block;
+}
+#card2{
+    display:none;
+}
+#card3{
+    display:none;
+}
+
+/* cards */
+
+/* card1 */
+.items-cards{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 50px;
+    background-image:linear-gradient(209.21deg, rgb(16, 114, 204) 13.57%, rgb(89, 0, 159) 98.38%);
+    width: 250px;
+    height: 360px;
+    border-radius:20px;
+    padding:20px;
+}
+.card1-img{
+    width: 100%;
+    height: 170px;
+}
+.items-cards-text{
+    font-style: normal;
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top:20px;
+}
+.items-cards-reating{
+    font-size: 16px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top:20px;
+}
+
+/* card2 */
+#card2{
+    margin-top: 50px;
+}
+.card-2{
+    display:flex;
+    box-shadow: 2px 2px 20px rgba(65, 64, 64, 0.527);
+    margin: 0;
+    width: 500px;
+    border-radius: 20px;
+    background-color:rgb(255, 255, 255);
+}
+.number-div{
+    font-size: 80px;
+    color:rgb(131, 128, 128);
+    background:white;
+    display:inline;
+    padding:20px;
+}
+.text-div{
+    display:inline;
+    margin: 0;
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+}
+
+/* card3 */
+.card-3{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 50px;
+    /* registation shurur time / registation shes er time icons bg color */
+    background-image:linear-gradient(209.21deg, rgb(16, 114, 204) 13.57%, rgb(89, 0, 159) 98.38%);
+    width: 250px;
+    height: 360px;
+    border-radius:20px;
+    padding:20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top:20px;
+}
+.card3-img{
+    width: 110px;
+    height: 110px;
+    border-radius:50px;
+}
+.CIC-KS-text{
+    margin-top: 15px;
+}
+
+/* btn */
+.CIC-Course-SL-btn{
+    text-decoration:none;
+    height: 40px;
+    width: 110px;
+    background: linear-gradient(50deg, #000cc794, #a300c5, #ff006c);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    border-radius: 50px;
+    margin-top:15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border:none;
+    display: inline;
+}
+.CIC-Course-SL-btn:hover{
+    background: linear-gradient(50deg, #ff006c, #a300c5, #000cc794);
+}
+
+
+
+
+/*responsive*/
+@media only screen and (max-width: 480px) {
+
+.btn-group {
+    width: 93%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.cards-div{
+    width: auto;
+}
+.btn-group{
+    width: 93%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.btn-group > button {
+    font-size: 72%;
+}
+.card-2{
+    width: 93%;
+    margin: 10px;
+    border-radius: 23px;
+    display: block;
+}
+.number-div{
+    background: none;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0px;
+}
+.text-div{
+    font-size: 81%;
+    text-align: center;
+}
+
+}

@@ -1,0 +1,154 @@
+.NavBar{
+  color: white;
+  align-items: center;
+position: absolute;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    max-width: 1234px;
+    height: 44px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    padding: 60px 30px;
+    z-index: 3;
+}
+.NavBar > h1{
+  margin-bottom: 0;
+}
+.NavBar > ul{
+  display:flex;
+  list-style:none;
+  margin-left:auto;
+  margin-bottom: 0;
+}
+.icon{
+  margin-right: 10px;
+}
+.NV-btn-li-tab {
+  margin-left:35px;
+  padding:10px 20px;
+  border-radius: 10px;
+  cursor:pointer;
+  align-items: center;
+  justify-content: center;
+}
+.NV-btn-li-tab:hover {
+  margin-left:35px;
+  background-color: rgba(255, 255, 255, 0.2); 
+  padding:10px 20px;
+  border-radius: 10px;
+  box-shadow:2px 2px 10px rgba(0, 0, 0, 0.246);
+  transition: 0.5s;
+  cursor:pointer;
+  color:white;
+}
+a {
+  color:white;
+  text-decoration: none;
+  cursor:pointer;
+}
+a:hover {
+  color:white;
+}
+
+/* dropdown button */
+
+.more-button > ul{
+  /* display:none; */
+  position:absolute;
+  float: center;
+  padding:0;
+  margin-top: 10px;
+  display: none;
+}
+.more-button:hover{
+  cursor:pointer;
+}
+.more-button:hover >  ul{
+  margin-top:24px;
+  display:block;
+  background-color: rgba(0, 0, 0, 0.616);
+  border-radius: 10px;
+  height: auto;
+  width: auto;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition:0.5s;
+  z-index: 2;
+}
+.DD-li{
+  list-style: none;
+  padding:10px 25px;
+  margin-top: 5px;
+  cursor:pointer;
+  overflow: hidden;
+  position: relative;
+}
+.blogs{
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.DD-li:hover{
+  cursor:pointer;
+}
+#click{
+display:none;
+}
+.menuBtn{
+folat:left;
+display:none;
+}
+
+
+
+
+/*responsive*/
+@media only screen and (max-width: 970px) {
+
+.menuBtn{
+folat:left;
+display:block;
+}
+.NavBar > ul {
+    list-style: none;
+    margin-left: auto;
+    margin-bottom: 0;
+    width: 230px;
+position: fixed;
+    background-image: linear-gradient(
+45deg, black, #000000cc);
+    display: block;
+    top: 80px;
+    padding-left: 0px;
+    left: 0px;
+    border-radius: 30px;
+left:-100%;
+    transition: all 0.5s ease;
+}
+.NV-btn-li-tab {
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin: 21px 0;
+    text-align: center;
+padding: 0;
+    display: flex;
+padding: 10px 20px;
+}
+.NV-btn-li-tab:hover {
+width:69%;
+}
+#click:checked ~ .nav-big-ul{
+left:69px;
+}
+.more-button:hover >  ul{
+display:none;
+}
+
+}

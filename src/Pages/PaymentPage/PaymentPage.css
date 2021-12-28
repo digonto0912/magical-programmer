@@ -1,0 +1,137 @@
+.nav-bg{
+        background-image: linear-gradient( 
+293deg, rgb(67 40 217), rgb(93 84 255 / 95%));
+    height: 87px;
+}
+.PaymentPage{
+    padding-top:120px;
+    padding:90px;
+    max-width: 1234px;
+    margin: 0px auto;
+    height: 1234px;
+}
+.headline{
+    font-family:normal;
+    font-weight: bold;
+}
+.top-half-box{
+    background-color:#fff;
+    height: 500px;
+    width:600px;
+    overflow-y: scroll;
+    padding-left:50px;
+    padding-top:50px;
+    border-radius: 20px;
+    margin-top:20px;
+}
+
+.payment-system-video{
+background-color: black;
+    width: 410px;
+    height: 264px;
+    border-radius: 10px;
+    margin-top: 23px;
+    margin-left: 123px;
+}
+
+/* btn */
+.PP-btn{
+    text-decoration:none;
+    height: 40px;
+    width: 110px;
+    background: linear-gradient(50deg, #000cc794, #a300c5, #ff006c);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    border-radius: 50px;
+    margin-top:20px;
+    border:none;
+display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.PP-btn:hover{
+    background: linear-gradient(50deg, #ff006c, #a300c5, #000cc794);
+}
+
+/* bottom form */
+.headline-mt{
+    margin-top:30px;
+}
+.form{
+    background-color:#fff;
+    height: calc(100%-20px);
+    width:600px;
+    padding:50px;
+    border-radius: 20px;
+    margin-top:20px;
+    box-shadow: 2px 2px 20px rgba(63, 63, 63, 0.472);
+}
+.form > input{
+    background-color:#fff;
+    height: 40px;
+    width:500px;
+    box-shadow: 2px 2px 2px rgba(90, 89, 89, 0.383);
+    border-radius: 20px;
+    margin-bottom:20px;
+    padding-left: 20px;
+}
+.form > input:focus{
+    border-radius:2px solid black;
+}
+
+/* btn */
+.PP-input-btn{
+    text-decoration:none;
+    height: 40px !important;
+    width: 110px !important;
+    background: linear-gradient(50deg, #000cc794, #a300c5, #ff006c);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3px !important;
+    display: flex;
+    border:none;
+    display: inline;
+    margin-bottom: 0;
+}
+.PP-input-btn:hover{
+    background: linear-gradient(50deg, #ff006c, #a300c5, #000cc794);
+}
+
+
+
+
+/*responsive*/
+@media only screen and (max-width: 480px) {
+
+.PaymentPage{
+    padding: 22px;
+}
+.PPD{
+    display:block !important;
+}
+.top-half-box{
+height: 420px;
+    width: 100%;
+    padding: 35px;
+}
+ol{
+padding:0;
+}
+.form{
+    width: 100%;
+}
+.form > input{
+    width: 100%;
+}
+.payment-system-video {
+    margin-left: 0px;
+    width: 100%;
+    height: auto;
+}
+
+}
