@@ -56,6 +56,9 @@ display: grid;
 }
 
 /* bottom form */
+#bottomInputeCard{
+    display:none;
+}
 .headline-mt{
     margin-top:30px;
 }
@@ -93,7 +96,6 @@ display: grid;
     justify-content: center;
     align-items: center;
     padding-left: 3px !important;
-    display: flex;
     border:none;
     display: inline;
     margin-bottom: 0;

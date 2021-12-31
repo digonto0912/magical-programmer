@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandSpock } from '@fortawesome/free-solid-svg-icons';
 import "./HomeBanner.css";
@@ -35,9 +36,11 @@ const Banner = () => {
                     </h2>
 
                     {/* button */}
+                    <Link to={"courses"}>
                     <button className="SL-btn">
                         {startNow}<b>Start Learning</b>
                     </button>
+                    </Link>
 
                     {/* h6 text */}
                     <h6 className="SL-BTN-D-H6">

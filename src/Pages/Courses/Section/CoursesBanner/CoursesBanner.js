@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import { faPlayCircle, faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import "./CoursesBanner.css";
 import { Carousel } from 'react-bootstrap';
 import moneyProblem from "../../../../images/courses/money-problem.png"
@@ -10,7 +10,10 @@ import success from "../../../../images/courses/success.svg"
 
 const CoursesBanner = () => {
 
-  const startNow = <FontAwesomeIcon icon={faPlayCircle} className="courses-startNow-icon" />
+  const payed = true;
+
+  const startNow = <FontAwesomeIcon icon={faPlayCircle} className="courses-startNow-icon" />;
+  const collectNow = <FontAwesomeIcon icon={faCartArrowDown} className="courses-startNow-icon" />;
 
     return (
         <div className="CoursesBanner">
@@ -37,21 +40,25 @@ const CoursesBanner = () => {
                     </h4>
 
                     <br />
+{
+                      (payed == true)?
 
                 <a href="/coursesCardPage" className="Course-SL-btn-a">
-                    <button className="Course-SL-btn">
+                    <button id="startNowButton" className="Course-SL-btn">
                       <div className="d-flex justify-content-center align-items-center">
                         Start Now {startNow}
                       </div>
                     </button>
                 </a>
-
+                :
                 <a href="/paymentPage" className="Course-SL-btn-a">
-                    <button className="Course-SL-btn">
-                      Pay Now
+                    <button id="collectNowButton" className="Course-SL-btn">
+                      <div className="d-flex justify-content-center align-items-center">
+                        Pay Now {collectNow}
+                      </div>
                     </button>
                 </a>
-                  
+}
                   </div>
                   
                   <img src={moneyProblem} className="png-images carousel-img carousel-1-img" />
@@ -75,18 +82,25 @@ const CoursesBanner = () => {
                     </h4>
                     
                     <br />
-                    
+{
+                      (payed == true)?
+
                 <a href="/coursesCardPage" className="Course-SL-btn-a">
-                    <button className="Course-SL-btn">
-                      start now
+                    <button id="startNowButton" className="Course-SL-btn">
+                      <div className="d-flex justify-content-center align-items-center">
+                        Start Now {startNow}
+                      </div>
                     </button>
                 </a>
+                :
                 <a href="/paymentPage" className="Course-SL-btn-a">
-                    <button className="Course-SL-btn">
-                      pay now
+                    <button id="collectNowButton" className="Course-SL-btn">
+                      <div className="d-flex justify-content-center align-items-center">
+                        Pay Now {collectNow}
+                      </div>
                     </button>
                 </a>
-                  
+}
                   </div>
                   
                   <img src={SGHelp} className="png-images carousel-img carousel-2-img" />
@@ -110,18 +124,25 @@ const CoursesBanner = () => {
                     </h4>
                     
                     <br />
-                    
+{
+                      (payed == true)?
+
                 <a href="/coursesCardPage" className="Course-SL-btn-a">
-                    <button className="Course-SL-btn">
-                      start now
+                    <button id="startNowButton" className="Course-SL-btn">
+                      <div className="d-flex justify-content-center align-items-center">
+                        Start Now {startNow}
+                      </div>
                     </button>
                 </a>
+                :
                 <a href="/paymentPage" className="Course-SL-btn-a">
-                    <button className="Course-SL-btn">
-                      pay now
+                    <button id="collectNowButton" className="Course-SL-btn">
+                      <div className="d-flex justify-content-center align-items-center">
+                        Pay Now {collectNow}
+                      </div>
                     </button>
                 </a>
-                  
+}
                   </div>
                   
                   <img src={learning} className=" carousel-img carousel-3-img" />
@@ -145,18 +166,25 @@ const CoursesBanner = () => {
                     </h4>
                     
                     <br />
-                    
+{
+                      (payed == true)?
+
                 <a href="/coursesCardPage" className="Course-SL-btn-a">
-                    <button className="Course-SL-btn">
-                      start now
+                    <button id="startNowButton" className="Course-SL-btn">
+                      <div className="d-flex justify-content-center align-items-center">
+                        Start Now {startNow}
+                      </div>
                     </button>
                 </a>
+                :
                 <a href="/paymentPage" className="Course-SL-btn-a">
-                    <button className="Course-SL-btn">
-                      pay now
+                    <button id="collectNowButton" className="Course-SL-btn">
+                      <div className="d-flex justify-content-center align-items-center">
+                        Pay Now {collectNow}
+                      </div>
                     </button>
                 </a>
-                  
+}
                   </div>
                   
                   <img src={success} className=" carousel-img carousel-4-img" />

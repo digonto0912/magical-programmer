@@ -1,0 +1,32 @@
+[
+    {
+        "blogImg":"//images.ctfassets.net/ooa29xqb8tix/4cDON6Rn9Q5ysi4HCsJQOF/fedd689e11b818352c033d5e502ea23c/SwiftUI_Concurrency_800x600_cover.png?w=400&q=50",
+        "blogName":"Problem Fixing Blog",
+        "blogReating":"4.8",
+        "color":"209.21deg, rgb(16, 114, 204) 13.57%, rgb(89, 0, 159) 98.38%"
+    },
+    {
+        "blogImg":"//images.ctfassets.net/ooa29xqb8tix/4cDON6Rn9Q5ysi4HCsJQOF/fedd689e11b818352c033d5e502ea23c/SwiftUI_Concurrency_800x600_cover.png?w=400&q=50",
+        "blogName":"Problem Fixing Blog",
+        "blogReating":"3.4",
+        "color":"209.21deg, rgb(16, 114, 204) 13.57%, rgb(89, 0, 159) 98.38%"
+    },
+    {
+        "blogImg":"//images.ctfassets.net/ooa29xqb8tix/4cDON6Rn9Q5ysi4HCsJQOF/fedd689e11b818352c033d5e502ea23c/SwiftUI_Concurrency_800x600_cover.png?w=400&q=50",
+        "blogName":"Problem Fixing Blog",
+        "blogReating":"2.6",
+        "color":"209.21deg, rgb(16, 114, 204) 13.57%, rgb(89, 0, 159) 98.38%"
+    },
+    {
+        "blogImg":"//images.ctfassets.net/ooa29xqb8tix/4cDON6Rn9Q5ysi4HCsJQOF/fedd689e11b818352c033d5e502ea23c/SwiftUI_Concurrency_800x600_cover.png?w=400&q=50",
+        "blogName":"Problem Fixing Blog",
+        "blogReating":"3.5",
+        "color":"209.21deg, rgb(16, 114, 204) 13.57%, rgb(89, 0, 159) 98.38%"
+    },
+    {
+        "blogImg":"//images.ctfassets.net/ooa29xqb8tix/4cDON6Rn9Q5ysi4HCsJQOF/fedd689e11b818352c033d5e502ea23c/SwiftUI_Concurrency_800x600_cover.png?w=400&q=50",
+        "blogName":"Problem Fixing Blog",
+        "blogReating":"1.9",
+        "color":"209.21deg, rgb(16, 114, 204) 13.57%, rgb(89, 0, 159) 98.38%"
+    }
+]

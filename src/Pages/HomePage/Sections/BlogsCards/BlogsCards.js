@@ -1,20 +1,35 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./BlogsCards.css"
 
 const BlogsCards = () => {
+
+    const [cardDatas, setcardDatas] = useState([]);
+
+    useEffect(()=>{
+        fetch("./API/blogsCardsApi.json")
+        .then(res => res.json())
+        .then(data => setcardDatas(data))
+    },[]);
+
     return (
         <div className="BC">
-            <div id="card1" className="BC-cards">
+            {
+                cardDatas.map(cardData => <>
 
-                <img src="//images.ctfassets.net/ooa29xqb8tix/4cDON6Rn9Q5ysi4HCsJQOF/fedd689e11b818352c033d5e502ea23c/SwiftUI_Concurrency_800x600_cover.png?w=400&q=50" className="BC-img" />
-                <p className="BC-text">
-                Problem Fixing Blog
-                </p>
-                <p className="BC-reating">
-                    Reating - 5.0
-                </p>
+                <div className="BC-cards">
+                    
+                    <img src={cardData.blogImg} className="BC-img" />
+                    <p className="BC-text">
+                        {cardData.blogName}
+                    </p>
+                    <p className="BC-reating">
+                        Reating - {cardData.blogReating}
+                    </p>
+                    
+                </div>
 
-            </div>
+                </>)
+            }
         </div>
     );
 };

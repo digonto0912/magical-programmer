@@ -1,7 +1,25 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
+import {Link} from "react-router-dom";
 import "./CourseInfosCard.css" ;
 
 const CourseInfosCard = () => {
+
+    const [corse1Infos, setcorse1Infos] = useState([]);
+
+    useEffect(()=>{
+        fetch("./API/CourseInfosApi1.json")
+        .then(res => res.json())
+        .then(data => setcorse1Infos(data))
+    },[])
+
+    const [corse2Infos, setcorse2Infos] = useState([]);
+
+    useEffect(()=>{
+        fetch("./API/CourseInfosApi2.json")
+        .then(res => res.json())
+        .then(data => setcorse2Infos(data))
+    },[])
+
     return (
         <div className="CIC">
             <div className="CIC-text">
@@ -10,9 +28,11 @@ const CourseInfosCard = () => {
                 <h5>
                     Once you’ve completed the courses, learn from our quick design and code tutorials to strengthen your knowledge
                 </h5>
-                <button>
+                <Link to="/courses">
+                <button className="CIC-button">
                 Inrole now
                 </button>
+                </Link>
             </div>
 
             <div className="info-cards">
@@ -21,17 +41,22 @@ const CourseInfosCard = () => {
 
                 <div className="info-card">
                     <div className="info-up-card">
-<h3>course subida</h3>
+                        <h3>course subida</h3>
                     <h5>
                         course subidacourse subidacourse subidacourse subidacourse subida
                     </h5>
-                    <div className="infos">
-                        <div className="info-number">1</div>
-                        <div>powerful 24hr supports</div>
-<div className="info-lvl">pro</div>
+                    {
+                        corse1Infos.map(corse1Info => <>
+                        <div className="infos">
+                            <div className="info-number">{corse1Info.id}</div>
+                            <div>{corse1Info.CInfo}</div>
+                            <div className="info-lvl">{corse1Info?.lvl}</div>
+                        </div>
+                        </>)
+                    }
+                    
                     </div>
-</div>
-<div className="info-down-card-1st"></div>
+                    <div className="info-down-card-1st"></div>
                 </div>
                 
                 {/* card 2 */}
@@ -42,11 +67,15 @@ const CourseInfosCard = () => {
                     <h5>
                         course subidacourse subidacourse subidacourse subidacourse subida
                     </h5>
-                    <div className="infos">
-                        <div className="info-number">1</div>
-                        <div>powerful 24hr supports</div>
-<div className="info-lvl">pro</div>
-                    </div>
+                    {
+                        corse2Infos.map(corse2Info => <>
+                        <div className="infos">
+                            <div className="info-number">{corse2Info.id}</div>
+                            <div>{corse2Info.CInfo}</div>
+                            <div className="info-lvl">{corse2Info?.lvl}</div>
+                        </div>
+                        </>)
+                    }
 </div>
 <div className="info-down-card-2nd"></div>
                 </div>

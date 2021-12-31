@@ -1,7 +1,16 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import './Video.css';
 
 const Video = () => {
+
+    const [VideoLists, setVideoLists] = useState([]);
+
+    useEffect(()=>{
+        fetch("./API/videoList.json")
+        .then(res => res.json())
+        .then(data => setVideoLists(data))
+    },[]);
+
     return (
         <div>
             <div className="v-nav-bg"></div>
@@ -20,60 +29,59 @@ const Video = () => {
                     {/* comments */}
                     <div className="commnets">
                         <div className="comment">
- {/* Profile Picture */}
-<div className="PP">
-PP
-</div>
-
-<div className="comment-text-box">
- {/* Profile Name */}
-<div className="PN">
-PN
-</div>
-
- {/* Comment Text */}
-<div className="CT">
-comment-text-1
-</div>
-</div>
+                            {/* Profile Picture */}
+                            <div className="PP">
+                                PP
+                            </div>
+                            
+                            <div className="comment-text-box">
+                                {/* Profile Name */}
+                                <div className="PN">
+                                    PN
+                                </div>
+                                {/* Comment Text */}
+                                <div className="CT">
+                                    comment-text-1
+                                </div>
+                            </div>
                         </div>
 
                         <div className="comment">
- {/* Profile Picture */}
-<div className="PP">
-PP
-</div>
-
-<div className="comment-text-box">
- {/* Profile Name */}
-<div className="PN">
-PN
-</div>
-
- {/* Comment Text */}
-<div className="CT">
-comment-text-2
-</div>
-</div>
+                            {/* Profile Picture */}
+                            <div className="PP">
+                                PP
+                            </div>
+                            
+                            <div className="comment-text-box">
+                                {/* Profile Name */}
+                                <div className="PN">
+                                    PN
+                                </div>
+                                
+                                {/* Comment Text */}
+                                <div className="CT">
+                                    comment-text-2
+                                </div>
+                            </div>
                         </div>
 
                         <div className="comment">
- {/* Profile Picture */}
-<div className="PP">
-PP
-</div>
-
-<div className="comment-text-box">
- {/* Profile Name */}
-<div className="PN">
-PN
-</div>
-
- {/* Comment Text */}
-<div className="CT">
-comment-text-3
-</div>
-</div>
+                            {/* Profile Picture */}
+                            <div className="PP">
+                                PP
+                            </div>
+                            
+                            <div className="comment-text-box">
+                                {/* Profile Name */}
+                                <div className="PN">
+                                    PN
+                                </div>
+                                
+                                {/* Comment Text */}
+                                <div className="CT">
+                                    comment-text-2
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -96,14 +104,16 @@ comment-text-3
                 </div>
 
                 {/* cards */}
-                <div className="milestone-card-0">
+                {
+                    VideoLists.map(VideoList => <>
+                    <div className="milestone-card-0">
 
                     <div className="milestone-card">
                         <div>
-                            <h3 className="milestone-card-headline">bla bla bla</h3>
+                            <h3 className="milestone-card-headline">{VideoList.headline}</h3>
                             <div className="d-flex">
-                                <div className="pe-2">time duration</div>
-                                <div>complited</div>
+                                <div className="pe-2">{VideoList.timeDuration}</div>
+                                <div>{VideoList.complited}</div>
                             </div>
                         </div>
                         
@@ -112,17 +122,19 @@ comment-text-3
                         </button>
                     </div>
 
-                    <ul className="module-cards">
+                    <ul id={VideoList.id} className="module-cards">
                         <li className="module-card">
-                            card er vitor card pothom ta aro vaki ache 1 ta .
+                            {VideoList.moduleCards.moduleCard.moduleCardName}
                             <ul className="module-card-videos">
                                 <li className="module-card-video">
-                                    card er bhitor card and tar o vitor card r baki nai 1 ta o.
+                                    {VideoList.moduleCards.moduleCard.videos.videoName}
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </div>
+                    </>)
+                }
 
             </div>
             </div>
