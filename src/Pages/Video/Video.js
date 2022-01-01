@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import './Video.css';
 
+
 const Video = () => {
 
     const [VideoLists, setVideoLists] = useState([]);
@@ -10,6 +11,16 @@ const Video = () => {
         .then(res => res.json())
         .then(data => setVideoLists(data))
     },[]);
+
+    const openThisModuleBox = (milestoneId) => {
+        const currentPanels = document.getElementsByClassName("module-cards");
+        const shownPanel = document.querySelector(".show");
+
+        if(shownPanel && !currentPanels[milestoneId].classList.contains("show")){
+            shownPanel.classList.remove("show");
+        }
+        currentPanels[milestoneId].classList.toggle("show");
+    }
 
     return (
         <div>
@@ -99,11 +110,14 @@ const Video = () => {
             <div className="video-name-list">
                 
                 {/* search */}
+                <div className="search-top-div">
                 <div className="search-div">
                     <input type="search" name="search" placeholder="search" id="" className="search-input" />
                 </div>
+                </div>
 
                 {/* cards */}
+                <div className="all-milestone-cards">
                 {
                     VideoLists.map(VideoList => <>
                     <div className="milestone-card-0">
@@ -117,12 +131,12 @@ const Video = () => {
                             </div>
                         </div>
                         
-                        <button className="milestone-card-btn">
+                        <button onClick={ () => openThisModuleBox(VideoList.milestoneId)} className="milestone-card-btn">
                             icon
                         </button>
                     </div>
 
-                    <ul id={VideoList.id} className="module-cards">
+                    <ul className="module-cards" id="module-cards">
                         <li className="module-card">
                             {VideoList.moduleCards.moduleCard.moduleCardName}
                             <ul className="module-card-videos">
@@ -135,6 +149,7 @@ const Video = () => {
                 </div>
                     </>)
                 }
+                </div>
 
             </div>
             </div>

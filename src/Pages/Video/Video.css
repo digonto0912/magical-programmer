@@ -103,7 +103,14 @@ height: 1234px;
 /* video name list  */
 
 .video-name-list{
-margin-left:100px;
+margin-left:65px;
+}
+.search-top-div{
+    width: 408px;
+    margin-bottom: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 .search-div{
     height: 79px;
@@ -123,8 +130,17 @@ margin-left:100px;
     border: none;
     background: #ede8e8;
 }
+.all-milestone-cards{
+    max-height: 895px;
+    overflow-y: auto;
+    width: 425px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
 .milestone-card-0{
-    margin-top: 20px;
+    margin-bottom: 20px;
     width: 338px;
     border-radius: 10px;
     padding: 10px;
@@ -150,12 +166,16 @@ margin-left:100px;
     border-radius: 10px;
     border: none;
 }
+.show{
+    display:block !important;
+}
 .module-cards{
     width: 318px;
     padding: 15px !important;
     margin-top: 20px;
     background: #a1a1a145;
     border-radius: 10px;
+    display:none;
 }
 .module-card{
     text-decoration: none;
