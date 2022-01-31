@@ -81,13 +81,15 @@
 
 
 /*responsive*/
-@media only screen and (max-width: 480px) {
+
+/* min-laptop */
+@media only screen and (max-width: 1255px) {
 
 .CoursesStartTime{
-display: block;
+    display: flex;
     height: auto;
     width: auto;
-    margin: 10px;
+    margin: 7.5vw;
 }
 .thumbImg{
 padding-right: 0px;
@@ -111,6 +113,37 @@ padding:20px;
 .CoursesStartTime-text > h3 {
     font-size: 16px;
 }
+}
 
+/* tab */
+@media only screen and (max-width: 992px) {
 
+.CoursesStartTime{
+display: block;
+    height: auto;
+    width: auto;
+    margin: 7.5vw;
+}
+.thumbImg{
+padding-right: 0px;
+    border: none;
+}
+.thumbImg > img{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+.CoursesStartTime-text{
+padding:20px;
+}
+.start-line{
+    border-radius: 17px;
+    background-color: white;
+    display: block;
+    text-align: center;
+    font-size: 11px;
+}
+.CoursesStartTime-text > h3 {
+    font-size: 16px;
+}
 }

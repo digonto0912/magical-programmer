@@ -1,0 +1,33 @@
+.Profile-Page{
+    background-image: url("https://data.whicdn.com/images/348841275/original.jpg?t=1600599740");
+}
+.profile-infos-card{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 664px;
+    /* 87px */
+}
+.infos-box{
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.507);
+    padding:20px;
+    grid-gap:20px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(248, 248, 248);
+}
+.user-img{
+    background-color:rgba(207, 207, 207, 0.698);
+    height:250px;
+    width:250px;
+    padding:10px;
+    border-radius: 200px;
+}
+.info-box-title{
+    color:rgb(0, 0, 0);
+}
+.info-box-info{
+    color:rgb(19, 19, 19);
+}

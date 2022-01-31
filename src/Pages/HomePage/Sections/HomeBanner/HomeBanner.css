@@ -17,7 +17,7 @@
 .banner{
     display:flex;
     max-width:1234px;
-margin:0px auto;
+    margin:0px auto;
 }
 
 
@@ -82,8 +82,8 @@ font-size: 45px;
 
 /* images shows */
 .img1{
-    height: 400px;
-    width: 680px;
+    width: 88%;
+    height: 100%;
     background-color: rgba(23, 12, 61, 0.3);
     box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
     border-radius: 10px;
@@ -93,8 +93,8 @@ font-size: 45px;
     position:relative;
 }
 .imgs-div:hover > .img1{
-    height: 440px;
-    width: 720px;
+    width: 88%;
+    height: 100%;
     background-color: rgba(23, 12, 61, 0.3);
     box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
     border-radius: 10px;
@@ -102,8 +102,10 @@ font-size: 45px;
     transition: 0.7s;
 }
 .img2{
-    margin-top: -60px;
-    margin-left: -740px;
+    width: 25%;
+    top: -15%;
+    left: -70px;
+    height: 31%;
     position: absolute;
     background-image: radial-gradient(218.51% 281.09% at 100% 100%, rgba(253, 63, 51, 0.6) 0%, rgba(76, 0, 200, 0.6) 45.83%, rgba(76, 0, 200, 0.6) 100%);
     border-radius: 10px;
@@ -112,8 +114,8 @@ font-size: 45px;
     transition: 0.7s;
 }
 .imgs-div:hover > .img2{
-    margin-top:-83px;
-    margin-left:-823px;
+    left: -70px;
+    height: 31%;
     position: absolute;
     background-image: radial-gradient(218.51% 281.09% at 100% 100%, rgba(253, 63, 51, 0.6) 0%, rgba(76, 0, 200, 0.6) 45.83%, rgba(76, 0, 200, 0.6) 100%);
     border-radius: 10px;
@@ -122,8 +124,10 @@ font-size: 45px;
     transform: skewX(0deg);
 }
 .img3{
-    margin-top: -60px;
-    margin-left: -520px;
+    width: 26%;
+    height: 31%;
+    top: -15%;
+    left: 22%;
     position: absolute;
     background-image: linear-gradient(192.64deg, rgb(67, 22, 219) 12.72%, rgba(144, 118, 231, 0.87) 54.49%, rgba(153, 236, 255, 0.34) 100.01%);
     border-radius: 10px;
@@ -132,8 +136,8 @@ font-size: 45px;
     transform: skewX(-7deg);
 }
 .imgs-div:hover > .img3{
-    margin-top: -83px;
-    margin-left: -553px;
+    top: -15%;
+    left: 22%;
     position: absolute;
     background-image: linear-gradient(192.64deg, rgb(67, 22, 219) 12.72%, rgba(144, 118, 231, 0.87) 54.49%, rgba(153, 236, 255, 0.34) 100.01%);
     border-radius: 10px;
@@ -142,9 +146,10 @@ font-size: 45px;
     transform: skewX(0deg);
 }
 .img4{
-    height:270px;
-    margin-top: 180px;
-    margin-left: -678px;
+    width: 53%;
+    height: 68%;
+    top: 45%;
+    left: 0%;
     position: absolute;
     background-color: rgba(23, 12, 61, 0.3);
     box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
@@ -153,8 +158,8 @@ font-size: 45px;
     transition: 0.7s;
 }
 .imgs-div:hover > .img4{
-    margin-top: 240px;
-    margin-left: -798px;
+    top: 45%;
+    left: 0%;
     position: absolute;
     background-color: rgba(23, 12, 61, 0.3);
     box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
@@ -163,9 +168,10 @@ font-size: 45px;
     transform: skewX(0deg);
 }
 .img5{
-    height:270px;
-    margin-top: 210px;
-    margin-left: -340px;
+    width: 55%;
+    height: 68%;
+    top: 53%;
+    left: 45%;
     position: absolute;
     background-color: rgba(23, 12, 61, 0.3);
     box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
@@ -174,8 +180,8 @@ font-size: 45px;
     transition: 0.7s;
 }
 .imgs-div:hover > .img5{
-    margin-top: 240px;
-    margin-left: -340px;
+    top: 53%;
+    left: 45%;
     position: absolute;
     background-color: rgba(23, 12, 61, 0.3);
     box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
@@ -187,23 +193,13 @@ font-size: 45px;
 
 /*responsive*/
 
-@media only screen and (max-width: 480px) {
-.HomePage{
-    padding-left: 32px;
-    padding-top: 129px;
-}
+/* tabe */
+
+@media only screen and (max-width: 1088px) {
 .banner{
     display:block;
     max-width:1234px;
     margin:0px auto;
-}
-
-/* BANNER HEADER */
-.banner-headline{
-    width: 100%;
-    font-size: 32px;
-    background: -webkit-linear-gradient(#000000, #550022, #000991);
-    -webkit-background-clip: text;
 }
 
 
@@ -215,124 +211,178 @@ font-size: 45px;
 }
 
 
-/* images shows */
-.img1{
-    width: 238px;
-    height: 100%;
-    border-radius: 2px;
-    display: grid;
+/* images */
+.imgs-div{
+    width:90%;
     justify-content: center;
     align-items: center;
-    transform: skewX( 
-0deg);
-    left: auto;
-    z-index: 2;
-    right: auto;
-}
-.imgs-div:hover > .img1{
-    width: 238px;
     height: 100%;
-    border-radius: 2px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    transform: skewX( 
-0deg);
-    left: auto;
-    z-index: 2;
-    right: auto;
+    float:right;
+    margin: 30% auto;
+    margin-top: 30px;
+    position:relative;
 }
 
+/* images shows */
+.img1{
+    width: 76%;
+    height: 100%;
+    background-color: rgba(23, 12, 61, 0.3);
+    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
+    border-radius: 2%;
+    transform: skewX(0deg);
+    transition: 0.7s;
+
+    position:relative;
+}
+.imgs-div:hover > .img1{
+    width: 76%;
+    height: 100%;
+    background-color: rgba(23, 12, 61, 0.3);
+    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
+    border-radius: 2%;
+    transform: skewX(0deg);
+    transition: 0.7s;
+}
 .img2{
-width: 79px;
-    margin: 0;
-    height: auto;
-    border-radius: 3px;
-    top: -31px;
-    transform: skewX( 
-0deg);
-    left: -20px;
-    z-index: 2;
+    width: auto;
+    top: -15%;
+    left: -70px;
+    height: 31%;
+    position: absolute;
+    background-image: radial-gradient(218.51% 281.09% at 100% 100%, rgba(253, 63, 51, 0.6) 0%, rgba(76, 0, 200, 0.6) 45.83%, rgba(76, 0, 200, 0.6) 100%);
+    border-radius: 8%;
+    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
+    transform: skewX(0deg);
+    transition: 0.7s;
 }
 .imgs-div:hover > .img2{
-    width: 79px;
-    margin: 0;
-    height: auto;
-    border-radius: 3px;
-    top: -31px;
-    transform: skewX( 
-0deg);
+    width: auto;
+    left: -70px;
+    height: 31%;
+    position: absolute;
+    background-image: radial-gradient(218.51% 281.09% at 100% 100%, rgba(253, 63, 51, 0.6) 0%, rgba(76, 0, 200, 0.6) 45.83%, rgba(76, 0, 200, 0.6) 100%);
+    border-radius: 8%;
+    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
+    transition: 0.7s;
+    transform: skewX(0deg);
+}
+.img3{
+    width: auto;
+    height: 31%;
+    top: -15%;
+    left: 22%;
+    position: absolute;
+    background-image: linear-gradient(192.64deg, rgb(67, 22, 219) 12.72%, rgba(144, 118, 231, 0.87) 54.49%, rgba(153, 236, 255, 0.34) 100.01%);
+    border-radius: 8%;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
+    transition: 0.7s;
+    transform: skewX(0deg);
+}
+.imgs-div:hover > .img3{
+    width: auto;
+    top: -15%;
+    left: 22%;
+    position: absolute;
+    background-image: linear-gradient(192.64deg, rgb(67, 22, 219) 12.72%, rgba(144, 118, 231, 0.87) 54.49%, rgba(153, 236, 255, 0.34) 100.01%);
+    border-radius: 8%;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
+    transition: 0.7s;
+    transform: skewX(0deg);
+}
+.img4{
+    width: auto;
+    height: 68%;
+    top: 45%;
+    left: 0%;
+    position: absolute;
+    background-color: rgba(23, 12, 61, 0.3);
+    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
+    border-radius: 3%;
+    transform: skewX(0deg);
+    transition: 0.7s;
+}
+.imgs-div:hover > .img4{
+    width: auto;
+    top: 45%;
+    left: 0%;
+    position: absolute;
+    background-color: rgba(23, 12, 61, 0.3);
+    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
+    border-radius: 3%;
+    transition: 0.7s;
+    transform: skewX(0deg);
+}
+.img5{
+    width: auto;
+    height: 68%;
+    top: 53%;
+    left: 45%;
+    position: absolute;
+    background-color: rgba(23, 12, 61, 0.3);
+    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
+    border-radius: 3%;
+    transform: skewX(0deg);
+    transition: 0.7s;
+}
+.imgs-div:hover > .img5{
+    width: auto;
+    top: 53%;
+    left: 45%;
+    position: absolute;
+    background-color: rgba(23, 12, 61, 0.3);
+    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
+    border-radius: 3%;
+    transition: 0.7s;
+    transform: skewX(0deg);
+}
+}
+
+
+/* mobile */
+
+@media only screen and (max-width: 688px) {
+.HomePage{
+    padding-left: 3.6%;
+    padding-top: 129px;
+}
+.banner{
+    display:block;
+    max-width:1234px;
+    margin:0px auto;
+}
+
+/* BANNER HEADER */
+.banner-headline{
+    width: 100%;
+}
+
+/* images */
+.imgs-div{
+    width:82%;
+}
+
+/* images shows */
+
+.img2{
     left: -20px;
-    z-index: 2;
+}
+.imgs-div:hover > .img2{
+    left: -20px;
 }
 
 .img3{
-    width: 79px;
-    margin: 0;
-    height: auto;
-    border-radius: 3px;
-    top: -31px;
     left: 60px;
-    z-index: 2;
-    transform: skewX( 
-0deg);
 }
 .imgs-div:hover > .img3{
-    width: 79px;
-    margin: 0;
-    height: auto;
-    border-radius: 3px;
-    top: -31px;
     left: 60px;
-    z-index: 2;
-    transform: skewX( 
-0deg);
-}
-
-.img4{
-    width: 125px;
-    margin: 0;
-    height: auto;
-    border-radius: 3px;
-    top: 75px;
-    left: 33px;
-    z-index: 2;
-    transform: skewX( 
-0deg);
-}
-.imgs-div:hover > .img4{
-    width: 125px;
-    margin: 0;
-    height: auto;
-    border-radius: 3px;
-    top: 75px;
-    left: 33px;
-    z-index: 2;
-    transform: skewX( 
-0deg);
-}
-
-.img5{
-    width: 129px;
-    margin: 0;
-    height: auto;
-    border-radius: 3px;
-    top: 88px;
-    left: 131px;
-    z-index: 2;
-    transform: skewX( 
-0deg);
-}
-.imgs-div:hover > .img5{
-    width: 129px;
-    margin: 0;
-    height: auto;
-    border-radius: 3px;
-    top: 88px;
-    left: 131px;
-    z-index: 2;
-    transform: skewX( 
-0deg);
 }
 
 }
+
+/* optional */
+@media only screen and (max-width: 1324px) {
+    .banner{
+        max-width:93%;
+    }
+    }

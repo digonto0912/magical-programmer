@@ -4,6 +4,11 @@
     align-items: center;
     display:grid;
 }
+.card-respon{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
 .btn-group{
     width:427px;
     background-image: linear-gradient(rgb(147, 155, 160), rgb(209, 216, 228));
@@ -84,7 +89,7 @@
 .card-2{
     display:flex;
     box-shadow: 2px 2px 20px rgba(65, 64, 64, 0.527);
-    margin: 0;
+    margin: auto;
     width: 500px;
     border-radius: 20px;
     background-color:rgb(255, 255, 255);
@@ -153,7 +158,23 @@
 
 
 /*responsive*/
-@media only screen and (max-width: 480px) {
+
+/* min-laptop */
+@media only screen and (max-width: 1620px) {
+    .card-respon{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* min-laptop */
+@media only screen and (max-width: 992px) {
+    .card-respon{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* mobile */
+@media only screen and (max-width: 688px) {
 
 .btn-group {
     width: 93%;
@@ -162,6 +183,7 @@
 }
 .cards-div{
     width: auto;
+    margin-bottom:9vw;
 }
 .btn-group{
     width: 93%;
@@ -171,9 +193,12 @@
 .btn-group > button {
     font-size: 72%;
 }
+.card-respon{
+    grid-template-columns: 1fr;
+}
 .card-2{
     width: 93%;
-    margin: 10px;
+    margin: auto;
     border-radius: 23px;
     display: block;
 }
@@ -189,4 +214,27 @@
     text-align: center;
 }
 
+}
+
+/* others */
+
+/* 2nd cards others style */
+@media only screen and (max-width: 1620px) {
+    .card-2{
+        width: 93%;
+        margin: auto;
+        border-radius: 23px;
+        display: block;
+    }
+    .number-div{
+        background: none;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0px;
+    }
+    .text-div{
+        font-size: 81%;
+        text-align: center;
+    }
 }

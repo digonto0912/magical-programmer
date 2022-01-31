@@ -1,8 +1,9 @@
 /* card1 */
 .BC{
-max-width:1234px;
-margin:0px auto;
-display:flex;
+    overflow-x: auto;
+    max-width:1235px;
+    margin:0px auto;
+    display:flex;
 }
 .BC-cards{
     margin-left: 10px;
@@ -38,12 +39,20 @@ display:flex;
 
 
 /*responsive*/
-@media only screen and (max-width: 480px) {
 
+/* mobile */
+@media only screen and (max-width: 688px) {
 .BC {
     overflow-x: auto;
+    margin:0px 3.6%;
     padding-left:10px;
     padding-right:10px;
 }
-
 }
+
+/* optional */
+@media only screen and (max-width: 1324px) {
+    .BC{
+        max-width:93%;
+    }
+    }

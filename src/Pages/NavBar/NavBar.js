@@ -15,17 +15,17 @@ const NavBar = () => {
   const Register = <FontAwesomeIcon icon={faUserPlus} />;
   const Login = <FontAwesomeIcon icon={faSignInAlt} />;
 
+
     return (
       <div className="NavBar">
 
         <h1>Brand</h1>
 
-        <input type="checkbox" id="click" />
-
+          <input type="checkbox" id="click" />
         <label for="click" className="menuBtn">
             {Bars}
         </label>
-<ul className="nav-big-ul">
+        <ul className="nav-big-ul">
 
           <Link to="/">
             <li className="NV-btn-li-tab">
@@ -48,7 +48,7 @@ const NavBar = () => {
 
           {/* more button dropdown */}
           <li className="more-button NV-btn-li-tab">
-...
+            ...
               
               {/* Dropdowns */}
             <ul className="dropdowns-ul">
@@ -82,6 +82,14 @@ const NavBar = () => {
           </Link>
 
           <Link to="/login">
+            <li className="NV-btn-li-tab">{Login}</li>
+          </Link>
+          
+          <Link to="/profile">
+            <li className="NV-btn-li-tab">{Login}</li>
+          </Link>
+
+          <Link to="/Dashboard">
             <li className="NV-btn-li-tab">{Login}</li>
           </Link>
         </ul>

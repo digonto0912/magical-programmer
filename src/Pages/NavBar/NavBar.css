@@ -1,22 +1,21 @@
 .NavBar{
   color: white;
   align-items: center;
-position: absolute;
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    max-width: 1234px;
-    height: 44px;
-    left: 0px;
-    right: 0px;
-    margin: 0px auto;
-    padding: 60px 30px;
-    z-index: 3;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1234px;
+  height: 44px;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  padding: 60px 30px;
+  z-index: 3;
 }
 .NavBar > h1{
   margin-bottom: 0;
 }
-.NavBar > ul{
+.nav-big-ul{
   display:flex;
   list-style:none;
   margin-left:auto;
@@ -96,9 +95,9 @@ a:hover {
 }
 #click{
 display:none;
+position: relative;
 }
 .menuBtn{
-folat:left;
 display:none;
 }
 
@@ -106,27 +105,26 @@ display:none;
 
 
 /*responsive*/
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1176px) {
 
 .menuBtn{
-folat:left;
-display:block;
+  display:block;
 }
-.NavBar > ul {
+.nav-big-ul {
     list-style: none;
     margin-left: auto;
     margin-bottom: 0;
     width: 230px;
-position: fixed;
-    background-image: linear-gradient(
-45deg, black, #000000cc);
+    position: fixed;
+    background-image: linear-gradient(45deg, black, #000000cc);
     display: block;
     top: 80px;
     padding-left: 0px;
-    left: 0px;
     border-radius: 30px;
-left:-100%;
     transition: all 0.5s ease;
+    right: 0;
+    position: absolute;
+    opacity: 0;
 }
 .NV-btn-li-tab {
     border-radius: 10px;
@@ -137,18 +135,24 @@ left:-100%;
     width: 100%;
     margin: 21px 0;
     text-align: center;
-padding: 0;
+    padding: 0;
     display: flex;
-padding: 10px 20px;
+    padding: 10px 20px;
 }
 .NV-btn-li-tab:hover {
 width:69%;
 }
 #click:checked ~ .nav-big-ul{
-left:69px;
+opacity:1;
 }
 .more-button:hover >  ul{
 display:none;
 }
-
 }
+
+/* optional */
+@media only screen and (max-width: 1324px) {
+  .NavBar{
+      max-width:93%;
+  }
+  }

@@ -1,12 +1,15 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect, useState, useRef} from 'react';
 import "./PaymentPage.css";
 
 const PaymentPage = () => {
+    
+    const phoneRef = useRef();
+    const bkashRef = useRef();
 
     const [PayRules, setPayRules] = useState([]);
     
     useEffect(()=>{
-        fetch("./API/paymentRules.json")
+        fetch("http://localhost:2333/PaymentSystemRuls")
         .then(res => res.json())
         .then(data => setPayRules(data))
     },[])
@@ -16,6 +19,28 @@ const PaymentPage = () => {
 
         bottomInutCard.style.display = "block";
     }
+
+    // all function
+
+    const formSub = e => {
+        e.preventDefault();
+    }
+
+    const bkashInfoSub = () => {
+        const phoneNumber = phoneRef.current.value;
+        const bkashCode = bkashRef.current.value;
+        const bkashPaymentInfo = {phoneNumber, bkashCode};
+        console.log(bkashPaymentInfo);
+
+        fetch("http://localhost:2333/bkashPayment", {
+            method:"POST", 
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(bkashPaymentInfo)
+        })
+        .then()
+    } 
 
     return (
         <div>
@@ -30,7 +55,9 @@ const PaymentPage = () => {
                     <div className="top-half-box">
                         <ol className="PP-ol">
                             {
-                                PayRules.map(PayRule =><li>
+                                PayRules.map(PayRule =><li
+                                key={PayRule._id}
+                                >
                                     {PayRule.rule}
                                 </li>
                                 )
@@ -49,17 +76,17 @@ const PaymentPage = () => {
                     <div id="bottomInputeCard">
                         <h3 className="headline headline-mt">Submite your phone number or verify code</h3>
                         
-                        <form className="form">
-                            <input type="text" name="your phonr number"  placeholder="your phone number" />
+                        <form onSubmit={formSub} className="form">
+                            <input type="text" ref={phoneRef} name="your phonr number"  placeholder="your phone number" />
 
                             <br />
 
-                            <input type="text" name="your bkash code" placeholder="your bkash code" />
+                            <input type="text" ref={bkashRef} name="your bkash code" placeholder="your bkash code" />
 
                             <br />
                             
                             <div className="form-sub-btn">
-                                <input type="submit"value="submit this" className="PP-input-btn" />
+                                <input type="submit" onClick={bkashInfoSub} value="submit this" className="PP-input-btn" />
                             </div>
                         </form>
                     </div>

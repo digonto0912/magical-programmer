@@ -1,0 +1,29 @@
+.Users {
+    border-radius: 23px;
+    margin: 36px;
+    box-shadow: 0px 0px 50px #00000029;
+    padding: 20px;
+}
+.box-name-and-add{
+    display:flex;
+    justify-content: space-between;
+}
+.User {
+    justify-content: space-between;
+    grid-gap: 26px;
+    overflow: auto;
+    align-items: center;
+    text-align: center;
+    background-color: #8306ff24;
+    box-shadow: -2px -2px 1px #00000029;
+    padding: 20px;
+    border-radius: 23px;
+}
+button {
+    border: none;
+    padding: 5px;
+    background: #fd000085;
+    border-radius: 5px;
+    color: #ffffff;
+    margin: 10px;
+}

@@ -3,6 +3,7 @@ display:flex;
 max-width:1234px;
 margin:0px auto;
 gap: 77px;
+overflow-x: auto;
 }
 .DVC{
     margin-left: auto;
@@ -119,13 +120,18 @@ font-weight: normal;
 
 
 /*responsive*/
-@media only screen and (max-width: 480px) {
 
+/* mobile */
+@media only screen and (max-width: 688px) {   
 .DVCs{
-    width: auto;
-    overflow-x: scroll;
     padding-left: 20px;
     padding-right: 20px;
 }
-
 }
+
+/* optional */
+@media only screen and (max-width: 1324px) {
+    .DVCs{
+        max-width:93%;
+    }
+    }

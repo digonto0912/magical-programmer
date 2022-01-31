@@ -1,7 +1,7 @@
 /*utilites*/
 
 .CIC{
-display: grid;
+    display: grid;
     grid-template-columns: 360px auto;
     gap: 60px;
     justify-items: center;
@@ -11,7 +11,7 @@ display: grid;
     margin: 300px auto 200px;
 }
 .CIC-text{
-position: relative;
+    position: relative;
     display: grid;
     align-content: start;
     justify-items: start;
@@ -137,10 +137,11 @@ width: 40px;
     font-family: system-ui;
     text-transform: uppercase;
     display: grid;
+    margin:auto
 }
 .info-down-card-1st{
-transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
-position: absolute;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+    position: absolute;
     width: 220px;
     height: 280px;
     background: linear-gradient(rgb(64, 141, 213) 0%, rgb(99, 11, 140) 100%);
@@ -150,9 +151,12 @@ position: absolute;
     transform-origin: left top;
     top: 0px;
 }
-.info-card:hover > .info-down-card-1st{
+.up-div-of-info-down-card-1st{
+    margin:auto;
+}
+.info-card:hover > .up-div-of-info-down-card-1st > .info-down-card-1st{
 transform: skewY(18deg);
-    width: 200px;
+width: 200px;
 }
 
 /*2nd card*/
@@ -169,8 +173,10 @@ position: absolute;
     transform-origin: left top;
     top: 0px;
 }
-
-.info-card:hover > .info-down-card-2nd{
+.up-div-of-info-down-card-2nd{
+    margin:auto;
+}
+.info-card:hover > .up-div-of-info-down-card-2nd > .info-down-card-2nd{
 transform: skewY(18deg);
     width: 200px;
 }
@@ -179,17 +185,46 @@ transform: skewY(18deg);
 
 
 /*responsive*/
-@media only screen and (max-width: 480px) {
 
+/* tab */
+@media only screen and (max-width: 1088px) {
 .CIC{
 display:block;
 }
+.CIC-text{
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
 .info-cards{
-    display:block;
+    display:flex;
+    justify-content:center;
+    align-items: center;
 }
 .info-card{
     margin: 0 auto;
     margin-top: 70px;
 }
-
 }
+
+/* mobile */
+@media only screen and (max-width: 688px) {
+.CIC{
+display:block;
+}
+.info-cards{
+    display:grid;
+}
+.info-card{
+    margin: 0 auto;
+    margin-top: 70px;
+}
+}
+
+/* optional */
+@media only screen and (max-width: 1324px) {
+    .CIC{
+        max-width:93%;
+    }
+    }

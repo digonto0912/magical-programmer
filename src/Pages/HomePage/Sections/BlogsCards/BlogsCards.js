@@ -6,7 +6,7 @@ const BlogsCards = () => {
     const [cardDatas, setcardDatas] = useState([]);
 
     useEffect(()=>{
-        fetch("./API/blogsCardsApi.json")
+        fetch("http://localhost:2333/BlogsCardsApi")
         .then(res => res.json())
         .then(data => setcardDatas(data))
     },[]);

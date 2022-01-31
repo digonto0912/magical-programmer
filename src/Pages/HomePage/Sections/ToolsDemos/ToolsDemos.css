@@ -106,7 +106,7 @@ width: 372px;
 
 
 /*responsive*/
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1088px) {
 
 .courses {
 margin-top: 205px;
@@ -147,5 +147,11 @@ display:none;
     margin-top: 0;
     margin-left: 0;
 }
-
 }
+
+/* optional */
+@media only screen and (max-width: 1324px) {
+    .courses{
+        max-width:93%;
+    }
+    }

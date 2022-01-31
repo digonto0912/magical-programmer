@@ -7,19 +7,37 @@ const Video = () => {
     const [VideoLists, setVideoLists] = useState([]);
 
     useEffect(()=>{
+        // fetch("http://localhost:2333/videoList")
         fetch("./API/videoList.json")
         .then(res => res.json())
         .then(data => setVideoLists(data))
     },[]);
-
+    
+    // openThisModuleBox function
     const openThisModuleBox = (milestoneId) => {
         const currentPanels = document.getElementsByClassName("module-cards");
         const shownPanel = document.querySelector(".show");
-
+        
         if(shownPanel && !currentPanels[milestoneId].classList.contains("show")){
             shownPanel.classList.remove("show");
         }
         currentPanels[milestoneId].classList.toggle("show");
+
+        showImg(milestoneId);
+    }
+
+    // openThisVideoBox function
+    const openThisVideoBox = (moduleCardsId) => {
+        const videosBox = document.querySelectorAll(".module-card-videos");
+        // const shownPanel = document.querySelector(".show");
+        
+        videosBox[moduleCardsId].classList.toggle("show");
+    }
+
+    const showImg= (milestoneId) =>{
+        const imgBox = document.querySelector(".video-div");
+
+        imgBox.src = VideoLists[milestoneId].img;
     }
 
     return (
@@ -32,7 +50,7 @@ const Video = () => {
                 <h1 className='headline'>Complite web developing course with "Fardul Digonto"</h1>
 
                 {/* video */}
-                <video className="video-div" />
+                <img src="" className="video-div" />
 
                 {/* comment box */}
                 <div className="commentBox">
@@ -136,10 +154,16 @@ const Video = () => {
                         </button>
                     </div>
 
+                    {/* 2nd card = module card */}
                     <ul className="module-cards" id="module-cards">
                         <li className="module-card">
                             {VideoList.moduleCards.moduleCard.moduleCardName}
-                            <ul className="module-card-videos">
+                            
+                            <button onClick={ () => openThisVideoBox(VideoList.moduleCards.moduleCardsId)} className="milestone-card-btn">
+                                2nd icon
+                            </button>
+
+                            <ul className="module-card-videos show">
                                 <li className="module-card-video">
                                     {VideoList.moduleCards.moduleCard.videos.videoName}
                                 </li>

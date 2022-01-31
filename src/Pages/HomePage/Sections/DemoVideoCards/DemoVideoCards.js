@@ -7,13 +7,13 @@ const DemoVideoCards = () => {
     const [CSSvideolists, setCSSvideoLists] = useState([]);
 
     useEffect(()=>{
-        fetch("./API/HTMLDemoVideoCardApi.json")
+        fetch("http://localhost:2333/htmlDemoVideos")
         .then(res => res.json())
         .then(data => setHTMLvideoLists(data))
     },[]);
 
     useEffect(()=>{
-        fetch("./API/CSSDemoVideoCardApi.json")
+        fetch("http://localhost:2333/cssDemoVideos")
         .then(res => res.json())
         .then(data => setCSSvideoLists(data))
     },[]);
@@ -30,7 +30,7 @@ const DemoVideoCards = () => {
 
                     {
                         HTMLvideoLists.map(HTMLvideoList => <>
-                        <div className="listOfVideo"><div className="videoListNumber">{HTMLvideoList.id}</div>
+                        <div className="listOfVideo"><div className="videoListNumber">{HTMLvideoList.number}</div>
                         <div className="videoList">
                             <div  className="videoInfos">
                                 <h4>{HTMLvideoList.videoName}</h4>
@@ -77,7 +77,7 @@ we teach all we can about them.
                     {
                         CSSvideolists.map(CSSvideolist => <>
                         <div className="listOfVideo">
-<div className="videoListNumber">{CSSvideolist.id}</div>
+<div className="videoListNumber">{CSSvideolist.number}</div>
                         <div className="videoList">
 <div  className="videoInfos">
 <h4>{CSSvideolist.videoName}</h4>

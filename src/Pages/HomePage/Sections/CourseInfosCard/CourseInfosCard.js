@@ -7,7 +7,7 @@ const CourseInfosCard = () => {
     const [corse1Infos, setcorse1Infos] = useState([]);
 
     useEffect(()=>{
-        fetch("./API/CourseInfosApi1.json")
+        fetch("http://localhost:2333/CourseInfosApi1")
         .then(res => res.json())
         .then(data => setcorse1Infos(data))
     },[])
@@ -15,7 +15,7 @@ const CourseInfosCard = () => {
     const [corse2Infos, setcorse2Infos] = useState([]);
 
     useEffect(()=>{
-        fetch("./API/CourseInfosApi2.json")
+        fetch("http://localhost:2333/CourseInfosApi2")
         .then(res => res.json())
         .then(data => setcorse2Infos(data))
     },[])
@@ -48,7 +48,7 @@ const CourseInfosCard = () => {
                     {
                         corse1Infos.map(corse1Info => <>
                         <div className="infos">
-                            <div className="info-number">{corse1Info.id}</div>
+                            <div className="info-number">{corse1Info.number}</div>
                             <div>{corse1Info.CInfo}</div>
                             <div className="info-lvl">{corse1Info?.lvl}</div>
                         </div>
@@ -56,7 +56,9 @@ const CourseInfosCard = () => {
                     }
                     
                     </div>
-                    <div className="info-down-card-1st"></div>
+                    <div className="up-div-of-info-down-card-1st">
+                        <div className="info-down-card-1st"></div>
+                    </div>
                 </div>
                 
                 {/* card 2 */}
@@ -70,14 +72,17 @@ const CourseInfosCard = () => {
                     {
                         corse2Infos.map(corse2Info => <>
                         <div className="infos">
-                            <div className="info-number">{corse2Info.id}</div>
+                            <div className="info-number">{corse2Info.number}</div>
                             <div>{corse2Info.CInfo}</div>
                             <div className="info-lvl">{corse2Info?.lvl}</div>
                         </div>
                         </>)
                     }
-</div>
-<div className="info-down-card-2nd"></div>
+                </div>
+                <div className="up-div-of-info-down-card-2nd">
+                    <div className="info-down-card-2nd"></div>
+                </div>
+
                 </div>
 
             </div>

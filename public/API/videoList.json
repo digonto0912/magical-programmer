@@ -4,8 +4,9 @@
         "headline":"bla bla bla",
         "timeDuration":"2hr 10min",
         "complited":"10/15",
+        "img":"//images.ctfassets.net/ooa29xqb8tix/4cDON6Rn9Q5ysi4HCsJQOF/fedd689e11b818352c033d5e502ea23c/SwiftUI_Concurrency_800x600_cover.png?w=400&q=50",
         "moduleCards":{
-            "moduleCardsId":"MCI-0",
+            "moduleCardsId":"0",
             "moduleCard":{
                 "moduleCardName":"card er vitor card pothom ta aro vaki ache 1 ta .",
                 "videos":{
@@ -20,7 +21,7 @@
         "timeDuration":"2hr 10min",
         "complited":"10/15",
         "moduleCards":{
-            "moduleCardsId":"MCI-1",
+            "moduleCardsId":"1",
             "moduleCard":{
                 "moduleCardName":"card er vitor card pothom ta aro vaki ache 1 ta .",
                 "videos":{
@@ -35,7 +36,7 @@
         "timeDuration":"2hr 10min",
         "complited":"10/15",
         "moduleCards":{
-            "moduleCardsId":"MCI-2",
+            "moduleCardsId":"2",
             "moduleCard":{
                 "moduleCardName":"card er vitor card pothom ta aro vaki ache 1 ta .",
                 "videos":{
@@ -50,7 +51,7 @@
         "timeDuration":"2hr 10min",
         "complited":"10/15",
         "moduleCards":{
-            "moduleCardsId":"MCI-3",
+            "moduleCardsId":"3",
             "moduleCard":{
                 "moduleCardName":"card er vitor card pothom ta aro vaki ache 1 ta .",
                 "videos":{
@@ -65,7 +66,7 @@
         "timeDuration":"2hr 10min",
         "complited":"10/15",
         "moduleCards":{
-            "moduleCardsId":"MCI-4",
+            "moduleCardsId":"4",
             "moduleCard":{
                 "moduleCardName":"card er vitor card pothom ta aro vaki ache 1 ta .",
                 "videos":{
@@ -80,7 +81,7 @@
         "timeDuration":"2hr 10min",
         "complited":"10/15",
         "moduleCards":{
-            "moduleCardsId":"MCI-5",
+            "moduleCardsId":"5",
             "moduleCard":{
                 "moduleCardName":"card er vitor card pothom ta aro vaki ache 1 ta .",
                 "videos":{
@@ -95,7 +96,7 @@
         "timeDuration":"2hr 10min",
         "complited":"10/15",
         "moduleCards":{
-            "moduleCardsId":"MCI-6",
+            "moduleCardsId":"6",
             "moduleCard":{
                 "moduleCardName":"card er vitor card pothom ta aro vaki ache 1 ta .",
                 "videos":{
@@ -110,7 +111,7 @@
         "timeDuration":"2hr 10min",
         "complited":"10/15",
         "moduleCards":{
-            "moduleCardsId":"MCI-7",
+            "moduleCardsId":"7",
             "moduleCard":{
                 "moduleCardName":"card er vitor card pothom ta aro vaki ache 1 ta .",
                 "videos":{
@@ -125,7 +126,7 @@
         "timeDuration":"2hr 10min",
         "complited":"10/15",
         "moduleCards":{
-            "moduleCardsId":"MCI-8",
+            "moduleCardsId":"8",
             "moduleCard":{
                 "moduleCardName":"card er vitor card pothom ta aro vaki ache 1 ta .",
                 "videos":{
@@ -140,7 +141,7 @@
         "timeDuration":"2hr 10min",
         "complited":"10/15",
         "moduleCards":{
-            "moduleCardsId":"MCI-9",
+            "moduleCardsId":"9",
             "moduleCard":{
                 "moduleCardName":"card er vitor card pothom ta aro vaki ache 1 ta .",
                 "videos":{
@@ -155,7 +156,7 @@
         "timeDuration":"2hr 10min",
         "complited":"10/15",
         "moduleCards":{
-            "moduleCardsId":"MCI-10",
+            "moduleCardsId":"10",
             "moduleCard":{
                 "moduleCardName":"card er vitor card pothom ta aro vaki ache 1 ta .",
                 "videos":{

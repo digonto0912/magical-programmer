@@ -7,7 +7,7 @@ const CoursesInfoCards = () => {
     const [cards1stsections, setcards1stsections] = useState([]);
 
     useEffect(()=>{
-        fetch("./API/CIC3Card1stApi.json")
+        fetch("http://localhost:2333/CIC3Card1stApi")
         .then(res => res.json())
         .then(data => setcards1stsections(data))
     },[]);
@@ -16,7 +16,7 @@ const CoursesInfoCards = () => {
     const [cards2ndsections, setcards2ndsections] = useState([]);
 
     useEffect(()=>{
-        fetch("./API/CIC3Card2ndApi.json")
+        fetch("http://localhost:2333/CIC3Card2ndApi")
         .then(res => res.json())
         .then(data => setcards2ndsections(data))
     },[]);
@@ -25,7 +25,7 @@ const CoursesInfoCards = () => {
     const [cards3rdsections, setcards3rdsections] = useState([]);
 
     useEffect(()=>{
-        fetch("./API/CIC3Card3rdApi.json")
+        fetch("http://localhost:2333/CIC3Card3rdApi")
         .then(res => res.json())
         .then(data => setcards3rdsections(data))
     },[]);
@@ -77,7 +77,8 @@ const CoursesInfoCards = () => {
             <div className="cards-div">
             {/* card 1 */}
             <div id="card1">
-{
+                <div className="card-respon">
+                {
                     cards1stsections.map(cards1stsection => <div className="items-cards">
                             
                             <img src={cards1stsection.img} className="card1-img" />
@@ -93,12 +94,13 @@ const CoursesInfoCards = () => {
                         </div>
                     )
 }
+                </div>
             </div>
 
             {/* card 2 */}
             <div id="card2">
-                
-{
+                <div className="card-respon">
+                {
                     cards2ndsections.map(cards2ndsection => <div className="card-2">
                             <div className="number-div">
                                 <b>
@@ -110,14 +112,14 @@ const CoursesInfoCards = () => {
                             </div>
                         </div>
                     )
-}
-                
-
+                }
+                </div>
             </div>
 
             {/* card3 */}
             <div id="card3">
-{
+                <div className="card-respon">
+                {
                     cards3rdsections.map(cards3rdsection =><div className="card-3">
                     
                     <img src={cards3rdsection.img} className="card3-img" />
@@ -130,9 +132,9 @@ const CoursesInfoCards = () => {
                         <button className="CIC-Course-SL-btn">Demo</button>
                     </a>
                 </div>
-                        )
-}
-                
+                    )
+                }
+                </div>                
             </div>
 </div>
 
