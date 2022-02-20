@@ -129,12 +129,93 @@ function Dashboard(props) {
     .then(data => setVideoLists(data))
   },[]);
 
+  
   // Delete Fetch
+  //html and css demo video
   const deleteHtmlDemoVideo = id => {
     fetch(`http://localhost:2333/HtmlDemoVideoDelete/${id}`, {
       method:"DELETE"
     })
     .then()
+  }
+  const deleteCssDemoVideo = id => {
+    fetch(`http://localhost:2333/CssDemoVideoDelete/${id}`, {
+      method:"DELETE"
+    })
+    .then()
+  }
+
+  // cInfos 2 card 
+  const deleteCourseInfoCard1 = id => {
+    fetch(`http://localhost:2333/CourseInfoCard1Delete/${id}`, {
+      method:"DELETE"
+    })
+    .then()
+  }
+  const deleteCourseInfoCard2 = id => {
+    fetch(`http://localhost:2333/CourseInfoCard2Delete/${id}`, {
+      method:"DELETE"
+    })
+    .then()
+  }
+
+  //blog card
+  const deleteBlogCard = id => {
+    fetch(`http://localhost:2333/BlogCardDelete/${id}`, {
+      method:"DELETE"
+    })
+    .then()
+  }
+
+  // CIC 3 card
+  const deleteCIC3Card1stApi = id => {
+    fetch(`http://localhost:2333/CIC3Card1stApiDelete/${id}`, {
+      method:"DELETE"
+    })
+    .then()
+  }
+  const deleteCIC3Card2ndApi = id => {
+    fetch(`http://localhost:2333/CIC3Card2ndApiDelete/${id}`, {
+      method:"DELETE"
+    })
+    .then()
+  }
+  const deleteCIC3Card3rdApi = id => {
+    fetch(`http://localhost:2333/CIC3Card3rdApiDelete/${id}`, {
+      method:"DELETE"
+    })
+    .then()
+  }
+
+  // PaymentSystemRules
+  const deletePaymentSystemRules = id => {
+    fetch(`http://localhost:2333/PaymentSystemRulesDelete/${id}`, {
+      method:"DELETE"
+    })
+    .then()
+  }
+
+  // VideoList
+  const deleteVideoList = id => {
+    fetch(`http://localhost:2333/VideoListDelete/${id}`, {
+      method:"DELETE"
+    })
+    .then()
+  }
+
+  // payment info true btn update
+  const PITBU = (email, courseName) => {
+    const userPay = {userPay:true, courseName:courseName};
+    
+    fetch(`http://localhost:2333/UpdateUserPay/${email}`, {
+      method:"PUT",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(userPay)
+    })
+    .then()
+
   }
 
 
@@ -233,12 +314,11 @@ function Dashboard(props) {
             {/* Bkash Payment Infos */}
             <div className='Users'>
               <div className="box-name-and-add">
-                  <h2>Bkash Payment Infos</h2>
+                <h2>Bkash Payment Infos</h2>
               </div>
               
-              
-            {
-              bkashPaymentInfos.map(bkashPaymentInfo => <div className="User">
+              {
+                bkashPaymentInfos.map(bkashPaymentInfo => <div className="User">
                 
                 <div className="infoBox">
                 <div>
@@ -247,39 +327,47 @@ function Dashboard(props) {
                 <div>
                     Bkash Code: {bkashPaymentInfo.bkashCode}
                 </div>
+                <div>
+                    email: {bkashPaymentInfo.email}
+                </div>
+                <div>
+                    course Name: {bkashPaymentInfo.course}
+                </div>
                 </div>
 
                 <div>
                   <button>
                     Massage
                   </button>
+                  <button onClick={() => PITBU(bkashPaymentInfo.email, bkashPaymentInfo.course)}>
+                    True
+                  </button>
                   <button>
                     x
                   </button>
                 </div>
               </div>
-          )
-        }
-        </div>
+              )
+              }
+            </div>
 
             {/* HTML Demo Video */}
             <div className='Users'>
               <div className="box-name-and-add">
                   <h2>HTML Demo Video </h2>
-                  <a href="/AddInfosHtmlDemoVideo">
+                  <a href= "/AddInfosHtmlDemoVideo">
                     <button>
                         +
                     </button>
                   </a>
               </div>
-              
-              
+               
             {
               HTMLvideoLists.map(HTMLvideoList => <div className="User">
                 
                 <div>
                 <div>
-                    Number: {HTMLvideoList.number}
+                    number: {HTMLvideoList.number}
                 </div>
                 <div>
                     videoName: {HTMLvideoList.videoName}
@@ -303,24 +391,24 @@ function Dashboard(props) {
                     </button>
                 </div>
               </div>
-          )
-        }
-        </div>
+            )
+            }
+            </div>
           
 
             {/* CSS Demo Video */}
-            {
-              CSSvideolists.map(CSSvideolist =><div className='Users'>
+            <div className='Users'>
               <div className="box-name-and-add">
                       <h2>CSS Demo Video </h2>
-                      <a href="/AddInfosCssDemoVideo">
+                  <a href="/AddInfosCssDemoVideo">
                     <button>
                         +
                     </button>
                   </a>
-                  </div>
-                  
-                  <div className="User">
+              </div>
+              
+              {
+              CSSvideolists.map(CSSvideolist =><div className="User">
                     
                     <div>
                     <div>
@@ -338,34 +426,35 @@ function Dashboard(props) {
                     </div>
     
                     <div> 
-                      <a href="/UpdateCssDemoVideo">
+                      <a href={`/UpdateCssDemoVideo/${CSSvideolist._id}`}>
                         <button>
                             update
                         </button>
                       </a>
-                        <button>
-                            x
-                        </button>
+                    <button onClick={() => deleteCssDemoVideo(CSSvideolist._id)}>
+                        x
+                    </button>
                     </div>
-                  </div>
               </div>
               )
-            }
+              }
+            </div>
           
             
             {/* Blogs Cards */}
-            {
-            cardDatas.map(cardData => <div className='Users'>
-          <div className="box-name-and-add">
-                  <h2>Blogs Cards</h2>
-                  <a href="/AddInfosBlogCard">
-                    <button>
-                        +
-                    </button>
-                  </a>
+            <div className='Users'>
+              <div className="box-name-and-add">
+                <h2>Blogs Cards</h2>
+                <a href="/AddInfosBlogCard">
+                  <button>
+                    +
+                  </button>
+                </a>
               </div>
               
-              <div className="User">
+              {
+                cardDatas.map(cardData =><div className="User"> 
+              
                 <div>
                     blogImg: {cardData.blogImg}
                 </div>
@@ -379,36 +468,36 @@ function Dashboard(props) {
                     color: {cardData.color}
                 </div>
                 <div> 
-                  <a href="/UpdateBlogCard">
+                <a href={`/UpdateBlogCard/${cardData._id}`}>
                     <button>
                         update
                     </button>
                   </a>
-                    <button>
+                    <button onClick={() => deleteBlogCard(cardData._id)}>
                         x
                     </button>
                 </div>
               </div>
-          </div>
-          )
-          }
+              )
+              }
+            </div>
           
             
             {/* Course Infos 1 */}
-            {
-              corse1Infos.map(corse1Info => <div className='Users'>
+            <div className='Users'>
               <div className="box-name-and-add">
-                      <h2>Course Infos 1</h2>
-                      <a href="/AddInfosCourseInfoCard1">
-                    <button>
-                        +
-                    </button>
-                  </a>
-                  </div>
-                  
-                  <div className="User">
+                <h2>Course Infos 1</h2>
+                <a href="/AddInfosCourseInfoCard1">
+                  <button>
+                    +
+                  </button>
+                </a>
+              </div>
+              
+              {
+              corse1Infos.map(corse1Info => <div className="User">
                     <div>
-                        Number: {corse1Info.number}
+                        number: {corse1Info.number}
                     </div>
                     <div>
                         CInfo: {corse1Info.CInfo}
@@ -418,35 +507,35 @@ function Dashboard(props) {
                     </div>
     
                     <div> 
-                      <a href="/UpdateCourseInfoCard1">
+                    <a href={`/UpdateCourseInfoCard1/${corse1Info._id}`}>
                         <button>
                             update
                         </button>
                         </a>
-                        <button>
-                            x
-                        </button>
+                    <button onClick={() => deleteCourseInfoCard1(corse1Info._id)}>
+                        x
+                    </button>
                     </div>
                   </div>
-              </div>
               )
-            }
+              }
+            </div>
           
             {/* Course Infos 2 */}
-            {
-              corse2Infos.map(corse2Info => <div className='Users'>
+            <div className='Users'>
               <div className="box-name-and-add">
-                      <h2>Course Infos 2</h2>
-                      <a href="/AddInfosCourseInfoCard2">
-                    <button>
-                        +
-                    </button>
-                  </a>
-                  </div>
-                  
-                  <div className="User">
+                <h2>Course Infos 2</h2>
+                <a href="/AddInfosCourseInfoCard2">
+                  <button>
+                    +
+                  </button>
+                </a>
+              </div>
+              
+              {
+              corse2Infos.map(corse2Info => <div className="User">
                     <div>
-                        Number: {corse2Info.number}
+                        number: {corse2Info.number}
                     </div>
                     <div>
                         CInfo: {corse2Info.CInfo}
@@ -456,34 +545,35 @@ function Dashboard(props) {
                     </div>
     
                     <div> 
-                      <a href="/UpdateCourseInfoCard2">
+                    <a href={`/UpdateCourseInfoCard2/${corse2Info._id}`}>
                         <button>
                             update
                         </button>
                       </a>
-                        <button>
-                            x
-                        </button>
+                    <button onClick={() => deleteCourseInfoCard2(corse2Info._id)}>
+                        x
+                    </button>
                     </div>
-                  </div>
-              </div>
-            )
-            }
+                    </div>
+              )
+              }
+            </div>
           
             
-            {/* Course Page Cars 1st  */}
-            {
-              cards1stsections.map(cards1stsection => <div className='Users'>
+            {/* Course Page Cards 1st  */}
+            <div className='Users'>
               <div className="box-name-and-add">
-                      <h2>Course Page Cars 1st</h2>
-                      <a href="/UpdateHtmlDemoVideo">
+                <h2>Course Page Cards 1st</h2>
+                <a href="/AddInfosCIC3Card1stApi">
                     <button>
                         +
                     </button>
                   </a>
-                  </div>
-                  
-                  <div className="User">
+              </div>
+              
+              
+            {
+              cards1stsections.map(cards1stsection => <div className="User">
                     <div>
                         img: {cards1stsection.img}
                     </div>
@@ -495,31 +585,33 @@ function Dashboard(props) {
                     </div>
                     
                     <div> 
+                    <a href={`/UpdateCIC3Card1stApi/${cards1stsection._id}`}>
                         <button>
                             update
                         </button>
-                        <button>
-                            x
-                        </button>
+                    </a>
+                    <button onClick={() => deleteCIC3Card1stApi(cards1stsection._id)}>
+                        x
+                    </button>
                     </div>
                   </div>
-              </div>
-              )
+            )
             }
+            </div>
             
-            {/* Course Page Cars 2nd */}
-            {
-              cards2ndsections.map(cards2ndsection => <div className='Users'>
+            {/* Course Page Cards 2nd */}
+            <div className='Users'>
               <div className="box-name-and-add">
-                      <h2>Course Page Cars 2nd</h2>
-                                        <a href="/UpdateHtmlDemoVideo">
-                    <button>
-                        +
-                    </button>
-                  </a>
-                  </div>
-                  
-                  <div className="User">
+                <h2>Course Page Cards 2nd</h2>
+                <a href="/AddInfosCIC3Card2ndApi">
+                  <button>
+                    +
+                  </button>
+                </a>
+              </div>
+
+            {
+              cards2ndsections.map(cards2ndsection => <div className="User">
                     <div>
                         num: {cards2ndsection.num}
                     </div>
@@ -527,31 +619,33 @@ function Dashboard(props) {
                         texts: {cards2ndsection.texts}
                     </div>
                     <div> 
+                    <a href={`/UpdateCIC3Card2ndApi/${cards2ndsection._id}`}>
                         <button>
                             update
                         </button>
-                        <button>
-                            x
-                        </button>
+                    </a>
+                    <button onClick={() => deleteCIC3Card2ndApi(cards2ndsection._id)}>
+                        x
+                    </button>
                     </div>
                   </div>
-              </div>
-              )
+            )
             }
+            </div>
           
-            {/* Course Page Cars 3rd  */}
-            {
-              cards3rdsections.map(cards3rdsection => <div className='Users'>
+            {/* Course Page Cards 3rd  */}
+            <div className='Users'>
               <div className="box-name-and-add">
-                      <h2>Course Page Cars 3rd</h2>
-                                        <a href="/UpdateHtmlDemoVideo">
-                    <button>
-                        +
-                    </button>
-                  </a>
-                  </div>
-                  
-                  <div className="User">
+                <h2>Course Page Cards 3rd</h2>
+                <a href="/AddInfosCIC3Card3rdApi">
+                  <button>
+                    +
+                  </button>
+                </a>
+              </div>
+            
+            {
+              cards3rdsections.map(cards3rdsection => <div className="User">
                     <div>
                         img: {cards3rdsection.img}
                     </div>
@@ -562,109 +656,119 @@ function Dashboard(props) {
                         link: {cards3rdsection.link}
                     </div>
     
-                    <div> 
+                    <div>  
+                    <a href={`/UpdateCIC3Card3rdApi/${cards3rdsection._id}`}>
                         <button>
                             update
                         </button>
-                        <button>
-                            x
-                        </button>
+                    </a>
+                    <button onClick={() => deleteCIC3Card3rdApi(cards3rdsection._id)}>
+                        x
+                    </button>
                     </div>
                   </div>
-              </div>
-              )
+            )
             }
+            </div>
           
             
             {/* Payment System Ruls */}
-            {
-              PayRules.map(PayRule => <div className='Users'>
+            <div className='Users'>
               <div className="box-name-and-add">
-                    <h2>Payment System Ruls</h2>
-                                      <a href="/UpdateHtmlDemoVideo">
-                    <button>
-                        +
-                    </button>
-                  </a>
-                </div>
-                
-                <div className="User">
+                <h2>Payment System Ruls</h2>
+                <a href="/PaymentSystemRulesAddInfos">
+                  <button>
+                    +
+                  </button>
+                </a>
+              </div>
+            
+            {
+              PayRules.map(PayRule => <div className="User">
                   <div>
-                      rule: {PayRules.rule}
+                      rule: {PayRule.rule}
                   </div>
                   <div> 
-                      <button>
-                          update
-                      </button>
-                      <button>
-                          x
-                      </button>
+                    <a href={`/UpdatePaymentSystemRules/${PayRule._id}`}>
+                        <button>
+                            update
+                        </button>
+                    </a>
+                    <button onClick={() => deletePaymentSystemRules(PayRule._id)}>
+                        x
+                    </button>
                   </div>
                 </div>
-            </div>)
+            )
             }
-          
+            </div>
             
             
             {/* video List */}
-            {
-              VideoLists.map(VideoList => <div className='Users'>
+            <div className='Users'>
               <div className="box-name-and-add">
-                  <h2>video List</h2>
-                                    <a href="/UpdateHtmlDemoVideo">
-                    <button>
-                        +
-                    </button>
-                  </a>
+                <h2>video List</h2>
+                <a href="/VideoListAddInfos">
+                  <button>
+                    +
+                  </button>
+                </a>
               </div>
-              
-              <div className="User">
+
+            {
+              VideoLists.map(VideoList => <div className="User">
                 <div>
-                    milestoneId: 2
+                    milestoneId: {VideoList.milestoneId}
                 </div>
                 <div>
-                    headline: bla bla bla
+                    headline: {VideoList.headline}
                 </div>
                 <div>
-                    timeDuration: 2hr 10min
+                    timeDuration: {VideoList.timeDuration}
                 </div>
                 <div>
-                    complited: 10/15
+                    complited: {VideoList.complited}
                 </div>
                 <div>
-                    moduleCardsId: MCI-2
+                    Img: {VideoList.img}
                 </div>
                 <div>
-                    moduleCardName: card er vitor card pothom ta aro vaki ache 1 ta .
+                    moduleCardsId: {VideoList.moduleCards.moduleCardsId}
                 </div>
                 <div>
-                    videoName: card er bhitor card and tar o vitor card r baki nai 1 ta o.
+                    moduleCardName: {VideoList.moduleCards.moduleCard.moduleCardName}
+                </div>
+                <div>
+                    videoName: {VideoList.moduleCards.moduleCard.videoName}
                 </div>
 
                 <div> 
-                    <button>
-                        update
-                    </button>
-                    <button>
+                    <a href={`/UpdateVideoList/${VideoList._id}`}>
+                        <button>
+                            update
+                        </button>
+                    </a>
+                    <button onClick={() => deleteVideoList(VideoList._id)}>
                         x
                     </button>
                 </div>
               </div>
-          </div>
-          )
+            )
             }
-          
+            </div>
+            
             
             {/* Users */}
-          <div className='Users'>
-            <div className="box-name-and-add">
-              <h2>User</h2>
-                                <a href="/UpdateHtmlDemoVideo">
-                    <button>
-                        +
-                    </button>
-                  </a>
-            </div>
+            <div className='Users'>
+              <div className="box-name-and-add">
+                <h2>User</h2>
+                <a href="/user">
+                  <button>
+                    +
+                  </button>
+                </a>
+              </div>
+              
               <div className="User">
                 <div>
                     name: fardul islam digonto
@@ -682,7 +786,7 @@ function Dashboard(props) {
                     </button>
                 </div>
               </div>
-          </div>
+            </div>
         </Typography>
       </Box>
     </Box>

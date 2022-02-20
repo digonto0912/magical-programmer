@@ -5,3 +5,9 @@
     font-family: 'Cabin', sans-serif;
     background-color: rgb(242, 246, 255);
 }
+.updates-input-pages{
+    min-height:577px;
+    display:grid;
+    justify-content:center;
+    align-items: center;
+}

@@ -1,45 +1,83 @@
 import React, {useState, useRef} from "react";
 import './Login.css';
+import validator from 'validator';
+import Auth from "../hooks/Auth";
+import { useNavigate } from "react-router-dom";
 // import useMongoDBForLogin from "./../hooks/useMongoDBForLogin";
 // import useFirebase from "./../hooks/useFirebase";
 
 function Login() {
+  // react router Navigate
+  const Navigate = useNavigate();
+  // Auth
+  const { userInfo } = Auth();
+
+  const [logInServerSideData, setLogInServerSideData] = useState({});
+  const [Error, setError] = useState("");
+  
   // const { signInWithGoogle, Token, User, signInWithForm, handelFormEmail, handelFormPass, onSubmit, Error } = useFirebase();
   // console.log(User, Token);
 
   // mongoDb
 
-  const [user, setUser] = useState({});
-
   const emailRef = useRef();
   const passRef = useRef();
 
-    const formOnSubmit = e => {
-        e.preventDefault();
-    };
+  const formOnSubmit = e => {
+    e.preventDefault();
+  };
 
-    const signInWithForm = () => {
-    const email = emailRef.current.value; 
-    const pass = passRef.current.value;
+  const signInWithForm = () => {
+  const email = emailRef.current.value; 
+  const pass = passRef.current.value;
+  
+  if(validator.isEmail(email)){
+    
     const loginUserInfo = {email, pass};
-
+  
     fetch("http://localhost:2333/login", {
       method:"POST",
       headers: {
         'Content-Type': 'application/json'
-        },
+      },
       body: JSON.stringify(loginUserInfo)
     })
     .then(res => res.json())
-    .then(data => setUser(data))
-  };
+    .then(data => {
+      const Data = data;
+      setLogInServerSideData(Data);
+      
+      // register back-end errors
+      const errors = Data?.error;
+      if(errors){
+        setError(errors);
+      }
+    });
+  }
+  else{
+    setError('Enter valid Email!')
+  }
 
+  if(userInfo.email){
+    Navigate("/");
+  }
+
+};
+ 
+  // set cookie
+  const token = logInServerSideData?.token;
+  const SG = logInServerSideData?.SG;
+  
+  if(token || SG){
+    document.cookie = encodeURIComponent("jwt") +  "=" + encodeURIComponent(token);
+    document.cookie = encodeURIComponent("SG") +  "=" + encodeURIComponent(SG);
+  }
   
 
   return (
     <div className="LogIn">
         <div className="login-form">
-            <h1 className="login-headline">Log In : {user.pass}</h1>
+            <h1 className="login-headline">Login</h1>
             
             {/* mongoDB */}
             <form onSubmit={formOnSubmit}>
@@ -51,6 +89,8 @@ function Login() {
               
               <input onClick={signInWithForm} type="submit" value="submit" className="login-submit" />
             </form>
+            
+            <div className="error">{Error}</div>
 
 
 

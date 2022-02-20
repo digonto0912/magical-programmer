@@ -1,17 +1,26 @@
 import React,{useEffect, useState, useRef} from 'react';
 import "./PaymentPage.css";
+import Auth from "../hooks/Auth";
 
 const PaymentPage = () => {
-    
+    // auth
+    const {userInfo} = Auth();
+
     const phoneRef = useRef();
     const bkashRef = useRef();
 
     const [PayRules, setPayRules] = useState([]);
+    const [TTRCN, setTTRCN] = useState([]);
     
     useEffect(()=>{
         fetch("http://localhost:2333/PaymentSystemRuls")
         .then(res => res.json())
         .then(data => setPayRules(data))
+    },[])
+    useEffect(()=>{
+        fetch("http://localhost:2333/ThisTimeRunningCourseName")
+        .then(res => res.json())
+        .then(data => setTTRCN(data))
     },[])
 
     const PPRTC = () => {
@@ -29,7 +38,15 @@ const PaymentPage = () => {
     const bkashInfoSub = () => {
         const phoneNumber = phoneRef.current.value;
         const bkashCode = bkashRef.current.value;
-        const bkashPaymentInfo = {phoneNumber, bkashCode};
+        const email = userInfo.email;
+        const course = TTRCN[0].ThisTimeRunningCourseName;
+
+        console.log(course);
+        const bkashPaymentInfo = {phoneNumber,
+            bkashCode, 
+            email,
+            course
+        };
         console.log(bkashPaymentInfo);
 
         fetch("http://localhost:2333/bkashPayment", {

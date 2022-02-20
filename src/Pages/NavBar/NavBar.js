@@ -2,11 +2,13 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faAddressCard, faChalkboard, faUserPlus, faSignInAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 import "./NavBar.css" ;
-import {
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
+import Auth from "../hooks/Auth";
 
 const NavBar = () => {
+  
+  // auth
+  const {userInfo} = Auth();
 
   const Bars = <FontAwesomeIcon icon={faBars} className="icon" />;
   const Home = <FontAwesomeIcon icon={faHome} className="icon" />;
@@ -39,11 +41,11 @@ const NavBar = () => {
             </li>
           </Link>
           
-          <Link to="/courses">
+          <a href="/courses">
             <li className="NV-btn-li-tab">
             {Courses}Courses
             </li>
-          </Link>
+          </a>
           
 
           {/* more button dropdown */}
@@ -75,23 +77,35 @@ const NavBar = () => {
 
           </li>
 
-          <Link to="/register">
+          {
+            userInfo.email?
+            <div className="ifedNavs">
+              <Link to="/profile">
+                <li className="NV-btn-li-tab">{Login}</li>
+              </Link>
+              
+              {
+                "fardulislamdigonto799@gmail.com" === userInfo.email?
+                <Link to="/Dashboard">
+                  <li className="NV-btn-li-tab">{Login}</li>
+                </Link>
+                :
+                <div className="d-none"></div>
+              }
+            </div>
+            :
+            <div className="ifedNavs">
+              <Link to="/register">
             <li className="NV-btn-li-tab">
               {Register}
             </li>
-          </Link>
-
-          <Link to="/login">
+              </Link>
+              <Link to="/login">
             <li className="NV-btn-li-tab">{Login}</li>
-          </Link>
+              </Link>
+            </div>
+          }
           
-          <Link to="/profile">
-            <li className="NV-btn-li-tab">{Login}</li>
-          </Link>
-
-          <Link to="/Dashboard">
-            <li className="NV-btn-li-tab">{Login}</li>
-          </Link>
         </ul>
 
       </div>

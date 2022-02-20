@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import './Video.css';
+import VideoPlayer from 'react-video-js-player';
 
 
 const Video = () => {
@@ -7,8 +8,8 @@ const Video = () => {
     const [VideoLists, setVideoLists] = useState([]);
 
     useEffect(()=>{
-        // fetch("http://localhost:2333/videoList")
-        fetch("./API/videoList.json")
+        fetch("http://localhost:2333/videoList")
+        // fetch("./API/videoList.json")
         .then(res => res.json())
         .then(data => setVideoLists(data))
     },[]);
@@ -177,6 +178,8 @@ const Video = () => {
 
             </div>
             </div>
+            <iframe src="https://drive.google.com/file/d/1iGTVep8GuOHe5KGNT4uksKmf7K8NjvoG/preview" width="640" height="480" allow="autoplay"></iframe>
+
         </div>
     );
 };

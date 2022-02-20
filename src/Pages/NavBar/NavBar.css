@@ -54,7 +54,6 @@ a:hover {
 /* dropdown button */
 
 .more-button > ul{
-  /* display:none; */
   position:absolute;
   float: center;
   padding:0;
@@ -100,6 +99,9 @@ position: relative;
 .menuBtn{
 display:none;
 }
+.ifedNavs{
+  display:flex;
+}
 
 
 
@@ -125,6 +127,7 @@ display:none;
     right: 0;
     position: absolute;
     opacity: 0;
+    display:none;
 }
 .NV-btn-li-tab {
     border-radius: 10px;
@@ -138,15 +141,20 @@ display:none;
     padding: 0;
     display: flex;
     padding: 10px 20px;
+    right:0;
 }
 .NV-btn-li-tab:hover {
 width:69%;
 }
 #click:checked ~ .nav-big-ul{
 opacity:1;
+display:block;
 }
 .more-button:hover >  ul{
 display:none;
+}
+.ifedNavs{
+  display:block;
 }
 }
 

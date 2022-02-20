@@ -1,4 +1,4 @@
-import React,{useRef, useState, useEffect} from 'react';
+import React,{useState, useEffect} from 'react';
 import "./UpdateHtmlDemoVideo.css";
 import {useParams} from "react-router";
 
@@ -10,32 +10,54 @@ const UpdateHtmlDemoVideo = () => {
         fetch(`http://localhost:2333/UpdateHtmlDemoVideo/${id}`)
         .then(res => res.json())
         .then(data => setHtmlDemoVideoData(data))
-    }, [])
+    }, []);
     
     // params
     const {id} = useParams();
+    
     // function
-    const submit = e => {
-        e.preventDefault();
-    }
+
     const updateNumber = e => {
-        const NumberValue = e.target.value;
-        const UpdateHtmlDemoVideoData = {...HtmlDemoVideoData};
-        UpdateHtmlDemoVideoData.number = NumberValue;
+        const Number = e.target.value;
+        const UpdateHtmlDemoVideoData = {number:Number, videoName:HtmlDemoVideoData.videoName, videoDuration:HtmlDemoVideoData.videoDuration, videoDis:HtmlDemoVideoData.videoDis};
+        console.log(UpdateHtmlDemoVideoData);
+
         setHtmlDemoVideoData(UpdateHtmlDemoVideoData);
     }
     const updateVideoName = e => {
-        const VideoNameValue = e.target.value;
+        const VideoName = e.target.value;
+        const UpdateHtmlDemoVideoData = {number:HtmlDemoVideoData.number, videoName:VideoName, videoDuration:HtmlDemoVideoData.videoDuration, videoDis:HtmlDemoVideoData.videoDis};
+        console.log(UpdateHtmlDemoVideoData);
 
+        setHtmlDemoVideoData(UpdateHtmlDemoVideoData);
     }
     const updateVideoDuration = e => {
-        const VideoDurationValue = e.target.value;
+        const VideoDuration = e.target.value;
+        const UpdateHtmlDemoVideoData = {number:HtmlDemoVideoData.number, videoName:HtmlDemoVideoData.videoName, videoDuration:VideoDuration, videoDis:HtmlDemoVideoData.videoDis};
+        console.log(UpdateHtmlDemoVideoData);
+
+        setHtmlDemoVideoData(UpdateHtmlDemoVideoData);
     }
     const updateVideoDis = e => {
-        const VideoDisValue = e.target.value;
+        const VideoDis = e.target.value;
+        const UpdateHtmlDemoVideoData = {number:HtmlDemoVideoData.number, videoName:HtmlDemoVideoData.videoName, videoDuration:HtmlDemoVideoData.videoDuration, videoDis:VideoDis};
+        console.log(UpdateHtmlDemoVideoData);
+
+        setHtmlDemoVideoData(UpdateHtmlDemoVideoData);
     }
-    const submitBtn = e => {
-        const VideoDisValue = e.target.value;
+    
+    const submit = e => {
+        fetch(`http://localhost:2333/UpdateHtmlDemoVideo/${id}`, {
+            method:"PUT",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(HtmlDemoVideoData)
+        })
+        .then(res => res.json())
+        .then(data => data)
+
+        e.preventDefault();
     }
 
     
@@ -45,12 +67,12 @@ const UpdateHtmlDemoVideo = () => {
         Name: {HtmlDemoVideoData.number}
         </h1>
             <form onSubmit={submit}>
-            <input type="text" onChange={updateNumber} value={HtmlDemoVideoData.name || ""} />
+            <input type="text" onChange={updateNumber} value={HtmlDemoVideoData.number || ""} />
             <input type="text" onChange={updateVideoName} value={HtmlDemoVideoData.videoName || ""} />
             <input type="text" onChange={updateVideoDuration} value={HtmlDemoVideoData.videoDuration || ""} />
             <input type="text" onChange={updateVideoDis} value={HtmlDemoVideoData.videoDis || ""} />
 
-            <input type="submit" onClick={submitBtn} placeholder="submit" />
+            <input type="submit" placeholder="submit" />
             </form>
         </div>
     );

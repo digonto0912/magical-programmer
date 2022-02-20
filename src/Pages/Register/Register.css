@@ -48,7 +48,13 @@ display: grid;
     color:rgba(248, 70, 100, 0.746) !important;
     box-shadow:0px 2px 40px rgba(248, 70, 100, 0.746);
 }
-
+.error{
+    display: grid;
+    color: red;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+}
 
 
 

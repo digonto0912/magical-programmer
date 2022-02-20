@@ -1,0 +1,26 @@
+[
+    {
+        "CN":"batch1",
+        "CID":"Batch1MernDeveloping",
+        "img":"img-link",
+        "CCN":"Complete Web Development Course With Fardul Digonto",
+        "CCAN":"Fardul Digonto",
+        "CVA":"/video"
+    },
+    {
+        "CN":"batc2",
+        "CID":"Batch1MernDeveloping",
+        "img":"img-link",
+        "CCN":"Complete Web Development Course With Fardul Digonto batc2",
+        "CCAN":"Fardul Digonto",
+        "CVA":"/video"
+    },
+    {
+        "CN":"batch3",
+        "CID":"Batch1MernDeveloping",
+        "img":"img-link",
+        "CCN":"Complete Web Development Course With Fardul Digonto batch3",
+        "CCAN":"Fardul Digonto",
+        "CVA":"/video"
+    }
+]
