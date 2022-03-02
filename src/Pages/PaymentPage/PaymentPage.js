@@ -1,10 +1,10 @@
 import React,{useEffect, useState, useRef} from 'react';
 import "./PaymentPage.css";
-import Auth from "../hooks/Auth";
+import UseAuth from "../hooks/UseAuth";
 
 const PaymentPage = () => {
-    // auth
-    const {userInfo} = Auth();
+    // UseAuth
+    const {userInfo} = UseAuth();
 
     const phoneRef = useRef();
     const bkashRef = useRef();

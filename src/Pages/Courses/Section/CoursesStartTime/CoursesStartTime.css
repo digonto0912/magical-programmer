@@ -12,6 +12,13 @@
 .thumbImg{
     padding-right:50px;
     border-right:2px solid white;
+    display: grid;
+    justify-content: space-around;
+}
+.thumbImg > img{
+    width: 400px;
+    height: 284px;
+    border-radius: 10px;
 }
 .CoursesStartTime-text{
     padding-left:50px;
@@ -146,4 +153,12 @@ padding:20px;
 .CoursesStartTime-text > h3 {
     font-size: 16px;
 }
+}
+
+/* optional */
+@media only screen and (max-width: 476px) {
+    
+    .thumbImg > img{
+        width: 100%;
+    }
 }

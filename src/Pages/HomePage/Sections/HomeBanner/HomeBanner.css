@@ -4,7 +4,7 @@
 /* home page */
 
 .HomePage{
-    background-image: url("../../../../images/magical-programmer-home-page-1st-background.jpg");
+    background-image: url("../../../../images/Home-img/magical-programmer-home-page-1st-background.jpg");
     height:879px;
     background-position: top center;
     background-repeat:no-repeat;
@@ -114,14 +114,15 @@ font-size: 45px;
     transition: 0.7s;
 }
 .imgs-div:hover > .img2{
-    left: -70px;
     height: 31%;
     position: absolute;
     background-image: radial-gradient(218.51% 281.09% at 100% 100%, rgba(253, 63, 51, 0.6) 0%, rgba(76, 0, 200, 0.6) 45.83%, rgba(76, 0, 200, 0.6) 100%);
     border-radius: 10px;
-    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
+    box-shadow: -1px -1px 2px rgb(255 255 255 / 20%);
     transition: 0.7s;
     transform: skewX(0deg);
+    top: -6vw;
+    left: -9vw;
 }
 .img3{
     width: 26%;
@@ -136,14 +137,14 @@ font-size: 45px;
     transform: skewX(-7deg);
 }
 .imgs-div:hover > .img3{
-    top: -15%;
-    left: 22%;
     position: absolute;
     background-image: linear-gradient(192.64deg, rgb(67, 22, 219) 12.72%, rgba(144, 118, 231, 0.87) 54.49%, rgba(153, 236, 255, 0.34) 100.01%);
     border-radius: 10px;
-    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
+    box-shadow: rgb(255 255 255 / 20%) 0px 0px 0px 0.5px inset;
     transition: 0.7s;
     transform: skewX(0deg);
+    top: -6vw;
+    left: 7vw;
 }
 .img4{
     width: 53%;
@@ -158,14 +159,14 @@ font-size: 45px;
     transition: 0.7s;
 }
 .imgs-div:hover > .img4{
-    top: 45%;
-    left: 0%;
     position: absolute;
     background-color: rgba(23, 12, 61, 0.3);
-    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
+    box-shadow: -1px -1px 2px rgb(255 255 255 / 20%);
     border-radius: 10px;
     transition: 0.7s;
     transform: skewX(0deg);
+    left: -5vw;
+    top: 16vw;
 }
 .img5{
     width: 55%;
@@ -180,14 +181,14 @@ font-size: 45px;
     transition: 0.7s;
 }
 .imgs-div:hover > .img5{
-    top: 53%;
-    left: 45%;
     position: absolute;
     background-color: rgba(23, 12, 61, 0.3);
-    box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2);
+    box-shadow: -1px -1px 2px rgb(255 255 255 / 20%);
     border-radius: 10px;
     transition: 0.7s;
     transform: skewX(0deg);
+    left: 25vw;
+    top: 18vw;
 }
 
 
@@ -259,6 +260,7 @@ font-size: 45px;
 .imgs-div:hover > .img2{
     width: auto;
     left: -70px;
+    top:-15%;
     height: 31%;
     position: absolute;
     background-image: radial-gradient(218.51% 281.09% at 100% 100%, rgba(253, 63, 51, 0.6) 0%, rgba(76, 0, 200, 0.6) 45.83%, rgba(76, 0, 200, 0.6) 100%);

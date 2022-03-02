@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import "./DemoVideoCards.css";
+import image1 from "../../../../images/Home-img/htmlDemoVideo.png";
+import image2 from "../../../../images/Home-img/cssDemoVideo.png";
 
 const DemoVideoCards = () => {
 
@@ -46,8 +48,8 @@ const DemoVideoCards = () => {
                     
                 </div>
 
-                <div className="imgCard">
-                    <img src="https://images.ctfassets.net/ooa29xqb8tix/2KiUooJBmI26N6u5gr2rlm/e2bb070640fe2778e1a58d160335cbe7/React_Hooks_handbook_800x600_cover_new.png?w=400&q=50" />
+                <div className="imgCard1 imgCard">
+                    <img src={image1} />
                     <h4>
                         we teach all we can about them.
                     </h4>
@@ -60,8 +62,8 @@ const DemoVideoCards = () => {
             
             {/* card 2 */}
             <div className="DVC">
-<div className="imgCard">
-<img src="https://images.ctfassets.net/ooa29xqb8tix/2KiUooJBmI26N6u5gr2rlm/e2bb070640fe2778e1a58d160335cbe7/React_Hooks_handbook_800x600_cover_new.png?w=400&q=50" />
+<div className="imgCard imgCard2">
+<img src={image2} />
 <h4>
 we teach all we can about them.
 </h4>

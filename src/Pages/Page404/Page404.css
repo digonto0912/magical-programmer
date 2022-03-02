@@ -1,0 +1,17 @@
+.ImgDiv404{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+.Img404{
+    width: 50vw;
+}
+.Img404title{
+    font-size: 2vw;
+    text-align: center;
+    margin: 33px;
+    color: rgb(0 0 0 / 70%);
+    font-family: cursive;
+}

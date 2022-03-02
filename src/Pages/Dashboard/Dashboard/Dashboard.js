@@ -41,6 +41,12 @@ function Dashboard(props) {
 
   // course page 3rd course infos card
   const [cards3rdsections, setcards3rdsections] = useState([]);
+  
+  // home page courses Infos Dark Card
+  const [CIDCHs, setCIDCHs] = useState([]);
+
+  // course page courses Infos Dark Card
+  const [CIDCCs, setCIDCCs] = useState([]);
 
   // Payment
   // payment Rules 
@@ -87,6 +93,19 @@ function Dashboard(props) {
       .then(res => res.json())
       .then(data => setcardDatas(data))
   },[]);
+
+  // course Infos Dark Cards
+  useEffect(()=>{
+    fetch("http://localhost:2333/CIDCH")
+    .then(res => res.json())
+    .then(data => setCIDCHs(data))
+  },[]);
+  useEffect(()=>{
+    fetch("http://localhost:2333/CIDCC")
+    .then(res => res.json())
+    .then(data => setCIDCCs(data))
+  },[]);
+  
 
   // course page course infos card
   useEffect(()=>{
@@ -181,6 +200,18 @@ function Dashboard(props) {
     .then()
   }
   const deleteCIC3Card3rdApi = id => {
+    fetch(`http://localhost:2333/CIC3Card3rdApiDelete/${id}`, {
+      method:"DELETE"
+    })
+    .then()
+  }
+  const deleteCIDCH = id => {
+    fetch(`http://localhost:2333/CIC3Card3rdApiDelete/${id}`, {
+      method:"DELETE"
+    })
+    .then()
+  }
+  const deleteCIDCC = id => {
     fetch(`http://localhost:2333/CIC3Card3rdApiDelete/${id}`, {
       method:"DELETE"
     })
@@ -756,6 +787,105 @@ function Dashboard(props) {
             )
             }
             </div>
+          
+            
+          {/* CIDCC */}
+          <div className='Users'>
+            <div className="box-name-and-add">
+              <h2>CIDCC</h2>
+              <a href="/AddInfosCIDCC">
+                <button>
+                  +
+                </button>
+              </a>
+            </div>
+          
+          {
+            CIDCCs.map(CIDCC => <div className="User">
+                <div>
+                    Img: {CIDCC.img}
+                </div>
+                <div>
+                    headline: {CIDCC.headline}
+                </div>
+                <div>
+                  Time Start: {CIDCC.timeStart}
+                </div>
+                <div>
+                  Time End: {CIDCC.timeEnd}
+                </div>
+                <div>
+                  Class Start: {CIDCC.classStart}
+                </div>
+                <div>
+                  Start BTN Headline: {CIDCC.StartBTNHeadline}
+                </div>
+                <div>
+                  BTN Text: {CIDCC.BTNText}
+                </div>
+
+                <div> 
+                  <a href={`/UpdateCIDCC/${CIDCC._id}`}>
+                      <button>
+                          update
+                      </button>
+                  </a>
+                  <button onClick={() => deleteCIDCC(CIDCC._id)}>
+                      x
+                  </button>
+                </div>
+              </div>
+          )
+          }
+          </div>
+          
+            
+          {/* CIDCH */}
+          <div className='Users'>
+            <div className="box-name-and-add">
+              <h2>CIDCH</h2>
+              <a href="/AddInfosCIDCH">
+                <button>
+                  +
+                </button>
+              </a>
+            </div>
+          
+          {
+            CIDCHs.map(CIDCH => <div className="User">
+                <div>
+                    Img: {CIDCH.img}
+                </div>
+                <div>
+                    headline: {CIDCH.headline}
+                </div>
+                <div>
+                  subline: {CIDCH.subline}
+                </div>
+                <div>
+                  {
+                    CIDCH.tipsInfos.map(tipInfo=><div>
+                      <div>Tipe Info title: {tipInfo.title}</div>
+                      <div>Tipe Info Img: {tipInfo.img}</div>
+                      <div>Tipe Info Img background: {tipInfo.imgBackgroundColor}</div>
+                    </div>)
+                  }
+                </div>
+
+                <div> 
+                  <a href={`/UpdateCIDCH/${CIDCH._id}`}>
+                      <button>
+                          update
+                      </button>
+                  </a>
+                  <button onClick={() => deleteCIDCH(CIDCH._id)}>
+                      x
+                  </button>
+                </div>
+              </div>
+          )
+          }
+          </div>
             
             
             {/* Users */}

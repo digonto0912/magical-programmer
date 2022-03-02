@@ -1,45 +1,56 @@
 import React,{useState, useEffect} from 'react';
 import "./CoursesCardPage.css";
-import Auth from "../hooks/Auth";
+import UseAuth from "../hooks/UseAuth";
 
 const CoursesCardPage = () => {
     
     const [CCIs, setCCIs] = useState([]);
     
-    // auth
-    const {userInfo} = Auth();
+    // UseAuth
+    const { userInfo } = UseAuth();
     
     const userCoursesCards = async() =>{
-        if(CCIs === false){
-            const userEmail = await userInfo?.email;
+        const userEmail = await userInfo?.email;
         
-            fetch(`http://localhost:2333/CCI`, {
-                method:"POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({userEmail})
-            })
-            .then(res => res.json())
-            .then(data => setCCIs(data))
-        }
-        else if(CCIs === true){
-            return;
-        }        
+        fetch(`http://localhost:2333/CCI`, {
+            method:"POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({userEmail})
+        })
+        .then(res => res.json())
+        .then(data => {
+            setCCIs(data)
+            console.log(CCIs);
+        });
+
+        document.getElementById("userCoursesCardsBTN").disabled = true;
     };
-    console.log(CCIs)
-    
-    userCoursesCards();
 
     return (
         <div>
             <div className="CCP-nav-bg"></div>
             
             <div className="CCP">
+                
+                <div className="PSMAC row">
+                    <p className="col-8">
+                        Please, Show my all Courses
+                    </p>
+
+                    <button onClick={() => userCoursesCards()} id="userCoursesCardsBTN" className="userCoursesCardsBTN col-3">
+                        Show
+                    </button>
+                </div>
+
                 <h1>Welcome, <span className="name-color">{userInfo?.email}</span> in this awesome Course</h1>
 
+                <br />
+
+                <div className="CCPCs row">
                 {
-                    CCIs.map(CCI =><div className="CCP-card">
+                    CCIs.map(CCI =><div className="CCP-card clo-xxl-6">
 
                     <div className="CCP-card-img">
                         <img src="" alt="" />
@@ -55,6 +66,7 @@ const CoursesCardPage = () => {
                     </div>
                 </div>)
                 }
+                </div>
 
             </div>
         </div>

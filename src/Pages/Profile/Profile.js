@@ -1,7 +1,16 @@
 import React from 'react';
 import "./Profile.css";
+import UseAuth from "./../hooks/UseAuth"
 
 const Profile = () => {
+
+    const {userInfo} = UseAuth();
+
+    const signOut = () => {
+        const SG = document?.cookie?.split(";")?.find(c => c?.includes("SG"));
+        SG.remove();
+    }
+
     return (
         <div className="Profile-Page">
             {/* <div className="CCP-nav-bg"></div> */}
@@ -16,7 +25,7 @@ const Profile = () => {
                     Name:
                 </div>
                 <div className="info-box-info">
-                    fardul digonto
+                    {userInfo?.userName}
                 </div>
             </div>
 
@@ -25,7 +34,7 @@ const Profile = () => {
                     Email
                 </div>
                 <div className="info-box-info">
-                    fardulislamdigonto799@gmail.com
+                    {userInfo.email}
                 </div>
             </div>
             
@@ -34,9 +43,13 @@ const Profile = () => {
                     Phone:
                 </div>
                 <div className="info-box-info">
-                    01674244278
+                    {userInfo?.phoneNumber}
                 </div>
             </div>
+
+            <button className='' onClick={signOut}>
+                Sign Out
+            </button>
 
             </div>
 

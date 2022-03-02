@@ -1,15 +1,12 @@
 import React, {useState, useRef} from "react";
 import './Register.css';
 import validator from 'validator';
-import Auth from "../hooks/Auth";
 import { useNavigate } from "react-router-dom";
 // import useFirebase from "./../hooks/useFirebase";
 
 function Register() {
   // react router Navigate
   const Navigate = useNavigate();
-  // Auth
-  const { userInfo } = Auth();
 
   const [registerServerSideData, setRegisterServerSideData] = useState({});
   const [Error, setError] = useState("");
@@ -19,7 +16,9 @@ function Register() {
 
   // mongoDB
 
+  const userNameRef = useRef();
   const emailRef = useRef();
+  const PhoneRef = useRef();
   const passRef = useRef();
 
   const formOnSubmit = e => {
@@ -29,15 +28,17 @@ function Register() {
   const signUpWithForm = () => {
 
     const userPay = false;
+    const userName = userNameRef.current.value; 
     const email = emailRef.current.value; 
+    const UserPhoneNumber = PhoneRef.current.value; 
     const pass = passRef.current.value;
-    const coursesNames = ["0"];
+    const coursesNames = [];
   
     if (validator.isEmail(email)) {
     setError('')
 
-    const newUserInfo = {email, pass, userPay, coursesNames};
-
+    const newUserInfo = {UserPhoneNumber, userName, email, pass, userPay, coursesNames};
+    console.log("newUserInfo", newUserInfo)
     fetch("http://localhost:2333/registation", {
       method:"POST",
       headers: {
@@ -48,6 +49,7 @@ function Register() {
     .then(res => res.json())
     .then(data => {
       const Data = data;
+      console.log(data);
       setRegisterServerSideData(Data);
       
       // register back-end errors
@@ -55,14 +57,16 @@ function Register() {
       if(errors){
         setError(errors);
       }
+
+      // navigate
+      if(Data.SG){
+      Navigate("/");
+      }
+
     });
     }
     else {
       setError('Enter valid Email!')
-    }
-
-    if(userInfo.email){
-      Navigate("/");
     }
   
   };
@@ -85,7 +89,13 @@ function Register() {
             {/* MongoDB */}
         
             <form onSubmit={formOnSubmit}>
-              <input ref={emailRef} type="email" name="email" placeholder="Email" />
+              <input ref={userNameRef} type="text" placeholder="User Name" />
+              <br />
+
+              <input ref={emailRef} type="email" name="User Name" placeholder="Email" />
+              <br />
+
+              <input ref={PhoneRef} type="number" name="User Phone Number" placeholder="Phone Number" />
               <br />
               
               <input ref={passRef} type="password" name="password" placeholder="Password" />

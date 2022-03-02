@@ -5,6 +5,7 @@ import {useParams} from "react-router";
 const UpdateBlogCard = () => {
     
     const [BlogCardData, setBlogCardData] = useState([]);
+    const [image, setImage] = useState(null);
 
     useEffect(()=>{
         fetch(`http://localhost:2333/UpdateBlogCard/${id}`)
@@ -17,61 +18,58 @@ const UpdateBlogCard = () => {
     
     // function
 
-    const updateBlogImg = e => {
-        const blogImg = e.target.value;
-        const UpdateBlogCardData = {blogImg:blogImg, blogName:BlogCardData.blogName, blogReating:BlogCardData.blogReating, color:BlogCardData.color};
-        console.log(UpdateBlogCardData);
-
-        setBlogCardData(UpdateBlogCardData);
-    }
     const updateBlogName = e => {
         const blogName = e.target.value;
-        const UpdateBlogCardData = {blogImg:BlogCardData.blogImg, blogName:blogName, blogReating:BlogCardData.blogReating, color:BlogCardData.color};
-        console.log(UpdateBlogCardData);
+        const UpdateBlogCardData = {blogName:blogName, blogReating:BlogCardData.blogReating, colorId:BlogCardData.colorId};
 
         setBlogCardData(UpdateBlogCardData);
     }
     const updateBlogReating = e => {
         const blogReating = e.target.value;
-        const UpdateBlogCardData = {blogImg:BlogCardData.blogImg, blogName:BlogCardData.blogName, blogReating:blogReating, color:BlogCardData.color};
-        console.log(UpdateBlogCardData);
+        const UpdateBlogCardData = {blogName:BlogCardData.blogName, blogReating:blogReating, colorId:BlogCardData.colorId};
 
         setBlogCardData(UpdateBlogCardData);
     }
-    const updateBlogCardColor = e => {
-        const color = e.target.value;
-        const UpdateBlogCardData = {blogImg:BlogCardData.blogImg, blogName:BlogCardData.blogName, blogReating:BlogCardData.blogReating, color:color};
-        console.log(UpdateBlogCardData);
+    const updateBlogCardColorId = e => {
+        const colorId = e.target.value;
+        const UpdateBlogCardData = {blogName:BlogCardData.blogName, blogReating:BlogCardData.blogReating, colorId:colorId};
 
         setBlogCardData(UpdateBlogCardData);
     }
 
     //submit
     const submit = e => {
+
+        e.preventDefault();
+        
+        const formData = new FormData();
+        formData.append("blogName", BlogCardData.blogName);
+        formData.append("blogReating", BlogCardData.blogReating);
+        formData.append("colorId", BlogCardData.colorId);
+        formData.append("img", image);
+        console.log(image);
+
+
         fetch(`http://localhost:2333/UpdateBlogCard/${id}`, {
             method:"PUT",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(BlogCardData)
+            body: formData
         })
         .then(res => res.json())
         .then(data => data)
 
-        e.preventDefault();
     }
 
     
     return (
         <div className="updates-input-pages">
         <h1 className="text-align-center">
-        Name: {BlogCardData.number}
+        colorId: {BlogCardData.colorId}
         </h1>
             <form onSubmit={submit}>
-            <input type="text" onChange={updateBlogImg} value={BlogCardData.blogImg || ""} />
+            <input accept='image/*' type="file" onChange={e => setImage(e.target.files[0])} />
             <input type="text" onChange={updateBlogName} value={BlogCardData.blogName || ""} />
             <input type="text" onChange={updateBlogReating} value={BlogCardData.blogReating || ""} />
-            <input type="text" onChange={updateBlogCardColor} value={BlogCardData.color || ""} />
+            <input type="text" onChange={updateBlogCardColorId} value={BlogCardData.colorId || ""} />
 
             <input type="submit" placeholder="submit" />
             </form>

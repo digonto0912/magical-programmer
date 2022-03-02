@@ -1,11 +1,13 @@
 import React from 'react';
-import Auth from "./Auth";
-import { Navigate } from 'react-router-dom';
+import UseAuth from "./UseAuth";
+import { Navigate, Outlet } from 'react-router-dom';
 
-const PrivateRoute = ({ children }) => {
-    const { userInfo } = Auth();
-    const userEmail = userInfo.email;
-    return userEmail ? children : <Navigate to="/login" />;
+const PrivateRoute = () => {
+    const {email} = UseAuth();
+    console.log(email);
+    
+    return email ? <Outlet /> : <Navigate to="/login" /> ;
+
 };
 
 export default PrivateRoute;

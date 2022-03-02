@@ -5,6 +5,14 @@
     font-family: 'Cabin', sans-serif;
     background-color: rgb(242, 246, 255);
 }
+.loadingStyle{
+    background-color:white;
+    display:grid;
+    justify-content:center;
+    align-items: center;
+    min-width: 100%;
+    min-height:100vh;
+}
 .updates-input-pages{
     min-height:577px;
     display:grid;

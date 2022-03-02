@@ -5,17 +5,55 @@
     height: 87px;
 }
 .CCP{
-height:550px;
-max-width:1234px;
-margin:0px auto;
+    min-height: 550px;
+    max-width: 1234px;
+    margin: 0px auto;
+    margin-bottom: 5vw;
+}
+.PSMAC{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 2vw;
+    box-shadow: 0px 0px 50px #dbdbdb;
+    max-width: 92vh;
+    margin-top: 35px;
+    padding: 7px 8px;
+}
+.PSMAC > p{
+    margin:0;
+    padding: 0.5vw;
+}
+.userCoursesCardsBTN{
+    text-decoration: none;
+    height: 40px;
+    width: 110px;
+    background: linear-gradient(50deg, #000cc794, #a300c5, #ff006c);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    display: inline;
+    margin: 0;
+}
+.userCoursesCardsBTN:hover{
+    background: linear-gradient(50deg, #ff006c, #a300c5, #000cc794);
 }
 .CCP > h1{
-font-family: system-ui;
+    font-family: system-ui;
     font-weight: bold;
-    padding: 45px 20px;
+    padding: 30px 20px;
 }
 .name-color{
 color:#5940e2;
+}
+.CCPCs{
+    margin:auto;
+    justify-content: space-between;
 }
 .CCP-card{
 background-color: #ffffff;
@@ -58,15 +96,47 @@ font-family: system-ui;
 
 
 /*responsive*/
-@media only screen and (max-width: 480px) {
+/* tab */
+@media only screen and (max-width: 1128px) {
 
 .CCP > h1{
     padding: 18px;
     font-size: 21px;
 }
 .CCP-card{
-display: block;
+    display: block;
+    width: 320px;
+    margin: 20px auto;
+}
+.CCP-card-img > img{
+display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.CCP-card-textside{
+    padding-left: 0;
+}
+.CCP-card-textside > h2{
+    margin-top: 12px;
+}
+
+}
+
+
+
+
+/* mobile */
+@media only screen and (max-width: 655px) {
+
+.CCP > h1{
+    padding: 18px;
+    font-size: 21px;
+}
+.CCP-card{
+    display: block;
     width: 87%;
+    margin: 20px auto;
 }
 .CCP-card-img > img{
 display: grid;

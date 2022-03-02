@@ -79,9 +79,9 @@ const CoursesInfoCards = () => {
             <div id="card1">
                 <div className="card-respon">
                 {
-                    cards1stsections.map(cards1stsection => <div className="items-cards">
+                    cards1stsections.map(cards1stsection => <div className={`items-cards ${cards1stsection.colorId}`}>
                             
-                            <img src={cards1stsection.img} className="card1-img" />
+                            <img src={`data:image/png;base64,${cards1stsection.image}`} className="card1-img" />
                             
                             <p className="items-cards-text">
                                 {cards1stsection.headline}
@@ -122,15 +122,14 @@ const CoursesInfoCards = () => {
                 {
                     cards3rdsections.map(cards3rdsection =><div className="card-3">
                     
-                    <img src={cards3rdsection.img} className="card3-img" />
+                    <div className="card3-img">
+                    !
+                    </div>
 
                     <div className="CIC-KS-text">
                         {cards3rdsection.whatYouLearn}
                     </div>
                     
-                    <a href={cards3rdsection.link}>
-                        <button className="CIC-Course-SL-btn">Demo</button>
-                    </a>
                 </div>
                     )
                 }

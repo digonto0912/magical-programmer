@@ -2,16 +2,22 @@
     background-image: linear-gradient(#6047ec, #5139d6) ;
     height:87px;
 }
-.video-side{
-    width:740px;
-}
 .videoPage{
     padding-top:60px;
     margin-left: 50px;
     margin-right: 50px;
-margin: 0px auto;
+    margin: 0px auto;
     max-width: 1234px;
-height: 1234px;
+    min-height: 10px;
+    justify-content: space-around;
+}
+.video-side{
+    width:740px;
+    padding: 0;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    margin-bottom:30px;
 }
 .headline{
     font-family: system-ui;
@@ -61,16 +67,29 @@ height: 1234px;
     margin-top: 20px;
     padding: 10px;
     border-radius: 5px;
+    margin: 0;
+    margin-top: 15px;
+    justify-content: space-around;
 }
 #postInput{
     border-radius: 20px;
     background-color: #0000003d;
-    width: 627px;
     height: 40px;
     border: none;
     color: rgb(34, 34, 34);
     padding-left: 10px;
     margin-right: 5px;
+}
+
+/* optional video css */
+.ndfHFb-c4YZDc-i5oIFb.ndfHFb-c4YZDc-e1YmVc .ndfHFb-c4YZDc-Wrql6b {
+    display:none;
+}
+.ytp-right-controls {
+    display:none;
+}
+.ytp-swatch-background-color {
+    background-color: #0fe;
 }
 
 /* btn style */
@@ -79,7 +98,6 @@ height: 1234px;
     text-decoration: none;
     background: linear-gradient(
 50deg, #000cc794, #a300c5, #ff006c);
-    padding-left: 20px;
     color: rgb(255, 255, 255);
     font-size: 20px;
     border-radius: 50px;
@@ -92,8 +110,7 @@ height: 1234px;
     display: flex;
     border: none;
     display: inline;
-    padding-right: 20px;
-    padding-bottom: 7px;
+    text-align:center;
     margin-right: 10px;
 }
 .post-btn:focus{
@@ -103,7 +120,7 @@ height: 1234px;
 /* video name list  */
 
 .video-name-list{
-margin-left:65px;
+    width: auto;
 }
 .search-top-div{
     width: 408px;
@@ -133,7 +150,6 @@ margin-left:65px;
 .all-milestone-cards{
     max-height: 895px;
     overflow-y: auto;
-    width: 425px;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -154,12 +170,12 @@ margin-left:65px;
     padding: 10px;
     justify-content: center;
     align-items: center;
+    margin:0;
 }
 .milestone-card-headline{
     font-family: system-ui;
 }
 .milestone-card-btn{
-    margin-left: 90px;
     background-image: linear-gradient(45deg, #ff0000c4, #ff62b0);
     color: white;
     height: 46px;
@@ -210,7 +226,7 @@ margin-right: 2%;
 }
 .video-div{
     width: 96%;
-    height: auto;
+    height: 200px;
 }
 .commentBox{
     width: 96%;
@@ -222,33 +238,24 @@ margin-right: 2%;
 #postInput{
     width: 70%;
     background: #ffffff14;
+    color:white;
 }
 .post-btn{
     margin-right: 0px;
 }
 .video-name-list{
-margin: 0px;
+    margin: 0px;
     margin-top: 38px;
 }
-.search-div{
-width: 96%;
-margin-left: 2%;
-margin-right: 2%;
+.search-top-div {
+    width:100%;
 }
 .search-input{
     margin-right: 17px;
     width: 89%;
 }
-.milestone-card-0{
-    width: 96%;
-margin-left: 2%;
-    margin-right: 2%;
-}
 .milestone-card{
     width: 100%;
-}
-.milestone-card-btn{
-    margin-left: 22%;
 }
 .module-cards{
 width: 100%;

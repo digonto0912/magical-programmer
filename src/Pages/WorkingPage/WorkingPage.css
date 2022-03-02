@@ -1,0 +1,17 @@
+.ImgDivWorkingPage{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+.WorkingImg{
+    width: 50vw;
+}
+.WorkingPageTitle{
+    font-size: 1.5vw;
+    text-align: center;
+    margin: 33px;
+    color: rgb(0 0 0 / 70%);
+    font-family: cursive;
+}

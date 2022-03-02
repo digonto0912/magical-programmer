@@ -1,14 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faAddressCard, faChalkboard, faUserPlus, faSignInAlt, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faAddressCard, faChalkboard, faUserPlus, faSignInAlt, faBars, faUser, faPooStorm } from '@fortawesome/free-solid-svg-icons';
 import "./NavBar.css" ;
-import { Link } from "react-router-dom";
-import Auth from "../hooks/Auth";
+import UseAuth from "../hooks/UseAuth";
 
 const NavBar = () => {
   
-  // auth
-  const {userInfo} = Auth();
+  // UseAuth
+  const {userInfo} = UseAuth();
 
   const Bars = <FontAwesomeIcon icon={faBars} className="icon" />;
   const Home = <FontAwesomeIcon icon={faHome} className="icon" />;
@@ -16,6 +15,8 @@ const NavBar = () => {
   const Courses = <FontAwesomeIcon icon={faChalkboard} className="icon" />;
   const Register = <FontAwesomeIcon icon={faUserPlus} />;
   const Login = <FontAwesomeIcon icon={faSignInAlt} />;
+  const User = <FontAwesomeIcon icon={faUser} />;
+  const Dashboard = <FontAwesomeIcon icon={faPooStorm} />;
 
 
     return (
@@ -29,17 +30,17 @@ const NavBar = () => {
         </label>
         <ul className="nav-big-ul">
 
-          <Link to="/">
+          <a href="/">
             <li className="NV-btn-li-tab">
             {Home}Home
             </li>
-          </Link>
+          </a>
 
-          <Link to="/about">
+          <a href="/about">
             <li className="NV-btn-li-tab">
             {About}About
             </li>
-          </Link>
+          </a>
           
           <a href="/courses">
             <li className="NV-btn-li-tab">
@@ -55,23 +56,23 @@ const NavBar = () => {
               {/* Dropdowns */}
             <ul className="dropdowns-ul">
 
-              <Link to="/problemSolving">
+              <a href="/problemSolving">
                 <li className="DD-li">
                   Problem Solving
                 </li>
-              </Link>
+              </a>
 
-              <Link to="/blogs">
+              <a href="/blogs">
                 <li className="blogs DD-li">
                   Blogs
                 </li>
-              </Link>
+              </a>
 
-              <Link to="/playGround">
+              <a href="/playGround">
                 <li className="DD-li">
                   Play Ground
                 </li>
-              </Link>
+              </a>
 
             </ul>
 
@@ -80,29 +81,29 @@ const NavBar = () => {
           {
             userInfo.email?
             <div className="ifedNavs">
-              <Link to="/profile">
-                <li className="NV-btn-li-tab">{Login}</li>
-              </Link>
+              <a href="/profile">
+                <li className="NV-btn-li-tab">{User}</li>
+              </a>
               
               {
                 "fardulislamdigonto799@gmail.com" === userInfo.email?
-                <Link to="/Dashboard">
-                  <li className="NV-btn-li-tab">{Login}</li>
-                </Link>
+                <a href="/Dashboard">
+                  <li className="NV-btn-li-tab">{Dashboard}</li>
+                </a>
                 :
                 <div className="d-none"></div>
               }
             </div>
             :
             <div className="ifedNavs">
-              <Link to="/register">
+              <a href="/register">
             <li className="NV-btn-li-tab">
               {Register}
             </li>
-              </Link>
-              <Link to="/login">
+              </a>
+              <a href="/login">
             <li className="NV-btn-li-tab">{Login}</li>
-              </Link>
+              </a>
             </div>
           }
           

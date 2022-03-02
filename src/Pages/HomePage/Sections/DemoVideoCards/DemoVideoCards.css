@@ -1,9 +1,9 @@
 .DVCs{
-display:flex;
-max-width:1234px;
-margin:0px auto;
-gap: 77px;
-overflow-x: auto;
+    display:flex;
+    max-width:1234px;
+    margin:0px auto;
+    gap: 77px;
+    overflow-x: auto;
 }
 .DVC{
     margin-left: auto;
@@ -14,7 +14,7 @@ overflow-x: auto;
     padding: 20px;
 }
 .nameOfCard{
-font-style: normal;
+    font-style: normal;
     font-size: 13px;
     line-height: 130%;
     color: rgba(0, 0, 0, 0.7);
@@ -35,7 +35,7 @@ font-style: normal;
     background-color: #efefefb8;
 }
 .videoListNumber{
-padding: 20px;
+    padding: 20px;
     background-color: #d7d6d6b8;
     border-radius: 50px;
     height: 44px;
@@ -64,7 +64,7 @@ padding: 20px;
     padding-right: 40px;
 }
 .timeRange{
-font-weight: normal;
+    font-weight: normal;
     font-size: 13px;
     line-height: 130%;
     position: absolute;
@@ -95,7 +95,12 @@ font-weight: normal;
     width: 239px;
     height: 363px;
     border-radius: 20px;
-    background: black;
+}
+.imgCard1{
+    background: linear-gradient(209.21deg, rgb(45, 14, 171) 13.57%, rgb(109, 81, 231) 98.38%);
+}
+.imgCard2{
+    background: linear-gradient(209.21deg, rgb(225, 72, 133) 13.57%, rgb(241, 67, 102) 98.38%);
 }
 .imgCard > img{
     width: 200px;

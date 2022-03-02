@@ -28,6 +28,8 @@
 }
 .cardImages{
     width: 400px;
+    height: 284px;
+    border-radius: 10px;
 }
 .tips{
     display:flex;

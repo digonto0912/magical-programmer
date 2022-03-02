@@ -3,15 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle, faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import "./CoursesBanner.css";
 import { Carousel } from 'react-bootstrap';
-import Auth from "../../../hooks/Auth";
+import UseAuth from "../../../hooks/UseAuth";
 import moneyProblem from "../../../../images/courses/money-problem.png"
 import SGHelp from "../../../../images/courses/SG-k-help-korchi.png"
 import learning from "../../../../images/courses/learning.svg"
 import success from "../../../../images/courses/success.svg"
 
 const CoursesBanner = () => {
-  // Auth
-  const { userInfo } = Auth();
+  // UseAuth
+  const { userInfo } = UseAuth();
 
   const payed = userInfo.userPay;
 

@@ -85,9 +85,6 @@ width:595px;
     border:none;
     display: inline;
 }
-.Course-SL-btn:hover{
-    box-shadow:0px 18px 40px #000cc794;
-}
 .courses-startNow-icon{
     font-size: 25px;
     border-radius:100%;

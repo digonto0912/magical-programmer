@@ -1,7 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import './Video.css';
-import VideoPlayer from 'react-video-js-player';
-
+ 
 
 const Video = () => {
 
@@ -24,34 +23,34 @@ const Video = () => {
         }
         currentPanels[milestoneId].classList.toggle("show");
 
-        showImg(milestoneId);
+        showVideo(milestoneId);
     }
 
     // openThisVideoBox function
     const openThisVideoBox = (moduleCardsId) => {
         const videosBox = document.querySelectorAll(".module-card-videos");
-        // const shownPanel = document.querySelector(".show");
         
         videosBox[moduleCardsId].classList.toggle("show");
     }
 
-    const showImg= (milestoneId) =>{
-        const imgBox = document.querySelector(".video-div");
+    const showVideo= (milestoneId) =>{
+        const VideoBox = document.querySelector(".video-div");
 
-        imgBox.src = VideoLists[milestoneId].img;
+        VideoBox.src = VideoLists[milestoneId]?.video;
     }
 
     return (
         <div>
             <div className="v-nav-bg"></div>
 
-            <div className='videoPage d-flex'>
+            <div className='videoPage d-flex row'>
             <div className='video-side'>
                 {/* headline */}
                 <h1 className='headline'>Complite web developing course with "Fardul Digonto"</h1>
 
                 {/* video */}
-                <img src="" className="video-div" />
+                <iframe src="https://drive.google.com/file/d/1iGTVep8GuOHe5KGNT4uksKmf7K8NjvoG/preview" className="video-div" allow="autoplay"></iframe>
+
 
                 {/* comment box */}
                 <div className="commentBox">
@@ -118,10 +117,10 @@ const Video = () => {
                 </div>
 
                     {/* post comments */}
-                    <div className="commentPost">
-                        <input type="text" placeholder="write your comment" name="postComment" id="postInput" />
+                    <div className="commentPost d-flex row">
+                        <input type="text" placeholder="write your comment" name="postComment" id="postInput" className="col-9" />
 
-                        <input type="submit" value="post" className='post-btn' />
+                        <input type="submit" value="post" className="post-btn col-2" />
                     </div>
             </div>
 
@@ -141,8 +140,8 @@ const Video = () => {
                     VideoLists.map(VideoList => <>
                     <div className="milestone-card-0">
 
-                    <div className="milestone-card">
-                        <div>
+                    <div className="milestone-card row">
+                        <div className="col-9">
                             <h3 className="milestone-card-headline">{VideoList.headline}</h3>
                             <div className="d-flex">
                                 <div className="pe-2">{VideoList.timeDuration}</div>
@@ -150,17 +149,19 @@ const Video = () => {
                             </div>
                         </div>
                         
-                        <button onClick={ () => openThisModuleBox(VideoList.milestoneId)} className="milestone-card-btn">
+                        <button onClick={ () => openThisModuleBox(VideoList.milestoneId)} className="milestone-card-btn col-2">
                             icon
                         </button>
                     </div>
 
                     {/* 2nd card = module card */}
                     <ul className="module-cards" id="module-cards">
-                        <li className="module-card">
-                            {VideoList.moduleCards.moduleCard.moduleCardName}
+                        <li className="module-card row justify-content-center d-flex">
+                            <p className="col-9">
+                                {VideoList.moduleCards.moduleCard.moduleCardName}
+                            </p>
                             
-                            <button onClick={ () => openThisVideoBox(VideoList.moduleCards.moduleCardsId)} className="milestone-card-btn">
+                            <button onClick={ () => openThisVideoBox(VideoList.moduleCards.moduleCardsId)} className="milestone-card-btn col-2">
                                 2nd icon
                             </button>
 
@@ -178,7 +179,6 @@ const Video = () => {
 
             </div>
             </div>
-            <iframe src="https://drive.google.com/file/d/1iGTVep8GuOHe5KGNT4uksKmf7K8NjvoG/preview" width="640" height="480" allow="autoplay"></iframe>
 
         </div>
     );

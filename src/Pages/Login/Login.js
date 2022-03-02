@@ -1,7 +1,6 @@
 import React, {useState, useRef} from "react";
 import './Login.css';
 import validator from 'validator';
-import Auth from "../hooks/Auth";
 import { useNavigate } from "react-router-dom";
 // import useMongoDBForLogin from "./../hooks/useMongoDBForLogin";
 // import useFirebase from "./../hooks/useFirebase";
@@ -9,8 +8,6 @@ import { useNavigate } from "react-router-dom";
 function Login() {
   // react router Navigate
   const Navigate = useNavigate();
-  // Auth
-  const { userInfo } = Auth();
 
   const [logInServerSideData, setLogInServerSideData] = useState({});
   const [Error, setError] = useState("");
@@ -52,14 +49,16 @@ function Login() {
       if(errors){
         setError(errors);
       }
+
+      // navigate home page
+      if(Data.SG){
+        Navigate("/");
+      }
+
     });
   }
   else{
     setError('Enter valid Email!')
-  }
-
-  if(userInfo.email){
-    Navigate("/");
   }
 
 };
