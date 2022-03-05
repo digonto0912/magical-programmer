@@ -7,7 +7,7 @@ const UpdateCIC3Card2ndApi = () => {
     const [CIC3Card2ndApiData, setCIC3Card2ndApiData] = useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:2333/UpdateCIC3Card2ndApi/${id}`)
+        fetch(`https://blooming-island-64834.herokuapp.com/UpdateCIC3Card2ndApi/${id}`)
         .then(res => res.json())
         .then(data => setCIC3Card2ndApiData(data))
     }, []);
@@ -33,7 +33,7 @@ const UpdateCIC3Card2ndApi = () => {
     }
     
     const submit = e => {
-        fetch(`http://localhost:2333/UpdateCIC3Card2ndApi/${id}`, {
+        fetch(`https://blooming-island-64834.herokuapp.com/UpdateCIC3Card2ndApi/${id}`, {
             method:"PUT",
             headers: {
                 'Content-Type': 'application/json'

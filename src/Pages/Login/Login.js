@@ -32,7 +32,7 @@ function Login() {
     
     const loginUserInfo = {email, pass};
   
-    fetch("http://localhost:2333/login", {
+    fetch("https://blooming-island-64834.herokuapp.com/login", {
       method:"POST",
       headers: {
         'Content-Type': 'application/json'
@@ -53,6 +53,7 @@ function Login() {
       // navigate home page
       if(Data.SG){
         Navigate("/");
+        document.location.reload(true);
       }
 
     });

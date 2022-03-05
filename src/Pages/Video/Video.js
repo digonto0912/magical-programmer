@@ -7,7 +7,7 @@ const Video = () => {
     const [VideoLists, setVideoLists] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:2333/videoList")
+        fetch("https://blooming-island-64834.herokuapp.com/videoList")
         // fetch("./API/videoList.json")
         .then(res => res.json())
         .then(data => setVideoLists(data))

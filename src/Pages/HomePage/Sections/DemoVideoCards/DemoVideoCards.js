@@ -9,13 +9,13 @@ const DemoVideoCards = () => {
     const [CSSvideolists, setCSSvideoLists] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:2333/htmlDemoVideos")
+        fetch("https://blooming-island-64834.herokuapp.com/htmlDemoVideos")
         .then(res => res.json())
         .then(data => setHTMLvideoLists(data))
     },[]);
 
     useEffect(()=>{
-        fetch("http://localhost:2333/cssDemoVideos")
+        fetch("https://blooming-island-64834.herokuapp.com/cssDemoVideos")
         .then(res => res.json())
         .then(data => setCSSvideoLists(data))
     },[]);

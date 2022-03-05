@@ -12,7 +12,7 @@ const CoursesCardPage = () => {
     const userCoursesCards = async() =>{
         const userEmail = await userInfo?.email;
         
-        fetch(`http://localhost:2333/CCI`, {
+        fetch(`https://blooming-island-64834.herokuapp.com/CCI`, {
             method:"POST",
             headers: {
                 'Content-Type': 'application/json'

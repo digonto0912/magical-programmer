@@ -63,45 +63,45 @@ function Dashboard(props) {
   // useEffect
   // html css demo video
   useEffect(()=>{
-    fetch("http://localhost:2333/htmlDemoVideos")
+    fetch("https://blooming-island-64834.herokuapp.com/htmlDemoVideos")
     .then(res => res.json())
     .then(data => setHTMLvideoLists(data))
   },[]);
   
   useEffect(()=>{
-    fetch("http://localhost:2333/cssDemoVideos")
+    fetch("https://blooming-island-64834.herokuapp.com/cssDemoVideos")
     .then(res => res.json())
     .then(data => setCSSvideoLists(data))
   },[]);
   
   //course info card
   useEffect(()=>{
-    fetch("http://localhost:2333/CourseInfosApi1")
+    fetch("https://blooming-island-64834.herokuapp.com/CourseInfosApi1")
       .then(res => res.json())
       .then(data => setcorse1Infos(data))
   },[])
 
   useEffect(()=>{
-      fetch("http://localhost:2333/CourseInfosApi2")
+      fetch("https://blooming-island-64834.herokuapp.com/CourseInfosApi2")
       .then(res => res.json())
       .then(data => setcorse2Infos(data))
   },[])
 
   // home page blog card
   useEffect(()=>{
-      fetch("http://localhost:2333/BlogsCardsApi")
+      fetch("https://blooming-island-64834.herokuapp.com/BlogsCardsApi")
       .then(res => res.json())
       .then(data => setcardDatas(data))
   },[]);
 
   // course Infos Dark Cards
   useEffect(()=>{
-    fetch("http://localhost:2333/CIDCH")
+    fetch("https://blooming-island-64834.herokuapp.com/CIDCH")
     .then(res => res.json())
     .then(data => setCIDCHs(data))
   },[]);
   useEffect(()=>{
-    fetch("http://localhost:2333/CIDCC")
+    fetch("https://blooming-island-64834.herokuapp.com/CIDCC")
     .then(res => res.json())
     .then(data => setCIDCCs(data))
   },[]);
@@ -109,19 +109,19 @@ function Dashboard(props) {
 
   // course page course infos card
   useEffect(()=>{
-    fetch("http://localhost:2333/CIC3Card1stApi")
+    fetch("https://blooming-island-64834.herokuapp.com/CIC3Card1stApi")
     .then(res => res.json())
     .then(data => setcards1stsections(data))
   },[]);
   
   useEffect(()=>{
-    fetch("http://localhost:2333/CIC3Card2ndApi")
+    fetch("https://blooming-island-64834.herokuapp.com/CIC3Card2ndApi")
     .then(res => res.json())
     .then(data => setcards2ndsections(data))
   },[]);
   
   useEffect(()=>{
-    fetch("http://localhost:2333/CIC3Card3rdApi")
+    fetch("https://blooming-island-64834.herokuapp.com/CIC3Card3rdApi")
     .then(res => res.json())
     .then(data => setcards3rdsections(data))
   },[]);
@@ -129,21 +129,21 @@ function Dashboard(props) {
   // Payment
   // payment Rules
   useEffect(()=>{
-    fetch("http://localhost:2333/PaymentSystemRuls")
+    fetch("https://blooming-island-64834.herokuapp.com/PaymentSystemRuls")
     .then(res => res.json())
     .then(data => setPayRules(data))
   },[])
 
   // Bkash Payment Info
   useEffect(()=>{
-    fetch("http://localhost:2333/bkashPaymentInfo")
+    fetch("https://blooming-island-64834.herokuapp.com/bkashPaymentInfo")
     .then(res => res.json())
     .then(data => setBkashPaymentInfos(data))
   },[])
 
   // video List
   useEffect(()=>{
-    fetch("http://localhost:2333/videoList")
+    fetch("https://blooming-island-64834.herokuapp.com/videoList")
     .then(res => res.json())
     .then(data => setVideoLists(data))
   },[]);
@@ -152,13 +152,13 @@ function Dashboard(props) {
   // Delete Fetch
   //html and css demo video
   const deleteHtmlDemoVideo = id => {
-    fetch(`http://localhost:2333/HtmlDemoVideoDelete/${id}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/HtmlDemoVideoDelete/${id}`, {
       method:"DELETE"
     })
     .then()
   }
   const deleteCssDemoVideo = id => {
-    fetch(`http://localhost:2333/CssDemoVideoDelete/${id}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/CssDemoVideoDelete/${id}`, {
       method:"DELETE"
     })
     .then()
@@ -166,13 +166,13 @@ function Dashboard(props) {
 
   // cInfos 2 card 
   const deleteCourseInfoCard1 = id => {
-    fetch(`http://localhost:2333/CourseInfoCard1Delete/${id}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/CourseInfoCard1Delete/${id}`, {
       method:"DELETE"
     })
     .then()
   }
   const deleteCourseInfoCard2 = id => {
-    fetch(`http://localhost:2333/CourseInfoCard2Delete/${id}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/CourseInfoCard2Delete/${id}`, {
       method:"DELETE"
     })
     .then()
@@ -180,7 +180,7 @@ function Dashboard(props) {
 
   //blog card
   const deleteBlogCard = id => {
-    fetch(`http://localhost:2333/BlogCardDelete/${id}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/BlogCardDelete/${id}`, {
       method:"DELETE"
     })
     .then()
@@ -188,31 +188,31 @@ function Dashboard(props) {
 
   // CIC 3 card
   const deleteCIC3Card1stApi = id => {
-    fetch(`http://localhost:2333/CIC3Card1stApiDelete/${id}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/CIC3Card1stApiDelete/${id}`, {
       method:"DELETE"
     })
     .then()
   }
   const deleteCIC3Card2ndApi = id => {
-    fetch(`http://localhost:2333/CIC3Card2ndApiDelete/${id}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/CIC3Card2ndApiDelete/${id}`, {
       method:"DELETE"
     })
     .then()
   }
   const deleteCIC3Card3rdApi = id => {
-    fetch(`http://localhost:2333/CIC3Card3rdApiDelete/${id}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/CIC3Card3rdApiDelete/${id}`, {
       method:"DELETE"
     })
     .then()
   }
   const deleteCIDCH = id => {
-    fetch(`http://localhost:2333/CIC3Card3rdApiDelete/${id}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/CIC3Card3rdApiDelete/${id}`, {
       method:"DELETE"
     })
     .then()
   }
   const deleteCIDCC = id => {
-    fetch(`http://localhost:2333/CIC3Card3rdApiDelete/${id}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/CIC3Card3rdApiDelete/${id}`, {
       method:"DELETE"
     })
     .then()
@@ -220,7 +220,7 @@ function Dashboard(props) {
 
   // PaymentSystemRules
   const deletePaymentSystemRules = id => {
-    fetch(`http://localhost:2333/PaymentSystemRulesDelete/${id}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/PaymentSystemRulesDelete/${id}`, {
       method:"DELETE"
     })
     .then()
@@ -228,7 +228,7 @@ function Dashboard(props) {
 
   // VideoList
   const deleteVideoList = id => {
-    fetch(`http://localhost:2333/VideoListDelete/${id}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/VideoListDelete/${id}`, {
       method:"DELETE"
     })
     .then()
@@ -238,7 +238,7 @@ function Dashboard(props) {
   const PITBU = (email, courseName) => {
     const userPay = {userPay:true, courseName:courseName};
     
-    fetch(`http://localhost:2333/UpdateUserPay/${email}`, {
+    fetch(`https://blooming-island-64834.herokuapp.com/UpdateUserPay/${email}`, {
       method:"PUT",
       headers: {
         'Content-Type': 'application/json'

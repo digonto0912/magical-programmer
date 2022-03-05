@@ -8,7 +8,7 @@ const UpdateBlogCard = () => {
     const [image, setImage] = useState(null);
 
     useEffect(()=>{
-        fetch(`http://localhost:2333/UpdateBlogCard/${id}`)
+        fetch(`https://blooming-island-64834.herokuapp.com/UpdateBlogCard/${id}`)
         .then(res => res.json())
         .then(data => setBlogCardData(data))
     }, []);
@@ -50,7 +50,7 @@ const UpdateBlogCard = () => {
         console.log(image);
 
 
-        fetch(`http://localhost:2333/UpdateBlogCard/${id}`, {
+        fetch(`https://blooming-island-64834.herokuapp.com/UpdateBlogCard/${id}`, {
             method:"PUT",
             body: formData
         })

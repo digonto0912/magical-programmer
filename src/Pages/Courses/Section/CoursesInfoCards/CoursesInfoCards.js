@@ -7,7 +7,7 @@ const CoursesInfoCards = () => {
     const [cards1stsections, setcards1stsections] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:2333/CIC3Card1stApi")
+        fetch("https://blooming-island-64834.herokuapp.com/CIC3Card1stApi")
         .then(res => res.json())
         .then(data => setcards1stsections(data))
     },[]);
@@ -16,7 +16,7 @@ const CoursesInfoCards = () => {
     const [cards2ndsections, setcards2ndsections] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:2333/CIC3Card2ndApi")
+        fetch("https://blooming-island-64834.herokuapp.com/CIC3Card2ndApi")
         .then(res => res.json())
         .then(data => setcards2ndsections(data))
     },[]);
@@ -25,7 +25,7 @@ const CoursesInfoCards = () => {
     const [cards3rdsections, setcards3rdsections] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:2333/CIC3Card3rdApi")
+        fetch("https://blooming-island-64834.herokuapp.com/CIC3Card3rdApi")
         .then(res => res.json())
         .then(data => setcards3rdsections(data))
     },[]);
@@ -63,13 +63,13 @@ const CoursesInfoCards = () => {
             <div className="d-flex btn-group">
 
                 <button onClick={()=>btn1()}>
-                    1. ai korche bisesotto ki?
+                এই কোর্সের বিশেষত্ব কি?
                 </button>
                 <button onClick={()=>btn2()}>
-                    2. ki ki shikte parbe ?
+                এই কোর্স কিভাবে চলবে?
                 </button>
                 <button onClick={()=>btn3()}>
-                    3. ki shikben ?
+                কি কি শিখতে পারবে
                 </button>
 
             </div>

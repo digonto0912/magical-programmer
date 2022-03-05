@@ -7,7 +7,7 @@ const CourseInfosCard = () => {
     const [corse1Infos, setcorse1Infos] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:2333/CourseInfosApi1")
+        fetch("https://blooming-island-64834.herokuapp.com/CourseInfosApi1")
         .then(res => res.json())
         .then(data => setcorse1Infos(data))
     },[])
@@ -15,7 +15,7 @@ const CourseInfosCard = () => {
     const [corse2Infos, setcorse2Infos] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:2333/CourseInfosApi2")
+        fetch("https://blooming-island-64834.herokuapp.com/CourseInfosApi2")
         .then(res => res.json())
         .then(data => setcorse2Infos(data))
     },[])

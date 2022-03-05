@@ -7,7 +7,7 @@ const AddInfosCssDemoVideo = () => {
     const [CssDemoVideoData, setCssDemoVideoData] = useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:2333/AddInfosCssDemoVideo/${id}`)
+        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosCssDemoVideo/${id}`)
         .then(res => res.json())
         .then(data => setCssDemoVideoData(data))
     }, []);
@@ -47,7 +47,7 @@ const AddInfosCssDemoVideo = () => {
     }
     
     const submit = e => {
-        fetch(`http://localhost:2333/AddInfosCssDemoVideo`, {
+        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosCssDemoVideo`, {
             method:"POST",
             headers: {
                 'Content-Type': 'application/json'

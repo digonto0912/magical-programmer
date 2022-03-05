@@ -5,7 +5,7 @@
 }
 .PaymentPage{
     padding-top:120px;
-    padding:90px;
+    padding:5% 4%;
     max-width: 1234px;
     margin: 0px auto;
     height: 1234px;
@@ -108,7 +108,7 @@ display: grid;
 
 
 /*responsive*/
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1225px) {
 
 .PaymentPage{
     padding: 22px;

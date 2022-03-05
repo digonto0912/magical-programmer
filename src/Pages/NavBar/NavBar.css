@@ -12,8 +12,9 @@
   padding: 60px 30px;
   z-index: 3;
 }
-.NavBar > h1{
+.logo{
   margin-bottom: 0;
+  width: 254px;
 }
 .nav-big-ul{
   display:flex;
@@ -161,6 +162,14 @@ display:none;
   display:block;
 }
 }
+
+/* phone logo */
+@media only screen and (max-width: 491px) {
+  .logo{
+      margin-left:-18px;
+      width:70%;
+  }
+  }
 
 /* optional */
 @media only screen and (max-width: 1324px) {

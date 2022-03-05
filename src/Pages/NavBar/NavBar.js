@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faAddressCard, faChalkboard, faUserPlus, faSignInAlt, faBars, faUser, faPooStorm } from '@fortawesome/free-solid-svg-icons';
 import "./NavBar.css" ;
 import UseAuth from "../hooks/UseAuth";
+import logo from "../../images/utilities/magical-programmer-logo-white.png";
 
 const NavBar = () => {
   
@@ -22,7 +23,7 @@ const NavBar = () => {
     return (
       <div className="NavBar">
 
-        <h1>Brand</h1>
+        <img src={logo} className="logo" />
 
           <input type="checkbox" id="click" />
         <label for="click" className="menuBtn">

@@ -7,7 +7,7 @@ const UpdateCIDCH = () => {
     const [CIDCHData, setCIDCHData] = useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:2333/UpdateCIDCH/${id}`)
+        fetch(`https://blooming-island-64834.herokuapp.com/UpdateCIDCH/${id}`)
         .then(res => res.json())
         .then(data => setCIDCHData(data))
     }, []);
@@ -42,7 +42,7 @@ const UpdateCIDCH = () => {
     
     //submit
     const submit = e => {
-        fetch(`http://localhost:2333/UpdateCIDCH/${id}`, {
+        fetch(`https://blooming-island-64834.herokuapp.com/UpdateCIDCH/${id}`, {
             method:"PUT",
             headers: {
                 'Content-Type': 'application/json'

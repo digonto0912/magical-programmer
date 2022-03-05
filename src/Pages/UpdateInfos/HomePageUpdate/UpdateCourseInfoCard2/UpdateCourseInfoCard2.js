@@ -7,7 +7,7 @@ const UpdateCourseInfoCard2 = () => {
     const [CourseInfoCard2, setCourseInfoCard2] = useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:2333/UpdateCourseInfoCard2/${id}`)
+        fetch(`https://blooming-island-64834.herokuapp.com/UpdateCourseInfoCard2/${id}`)
         .then(res => res.json())
         .then(data => setCourseInfoCard2(data))
     }, []);
@@ -40,7 +40,7 @@ const UpdateCourseInfoCard2 = () => {
     }
     
     const submit = e => {
-        fetch(`http://localhost:2333/UpdateCourseInfoCard2/${id}`, {
+        fetch(`https://blooming-island-64834.herokuapp.com/UpdateCourseInfoCard2/${id}`, {
             method:"PUT",
             headers: {
                 'Content-Type': 'application/json'

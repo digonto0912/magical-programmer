@@ -16,7 +16,7 @@ const UseAuth = () => {
   
       if(email){
         // server
-        fetch("http://localhost:2333/auth", {
+        fetch("https://blooming-island-64834.herokuapp.com/auth", {
           method:"POST", 
           headers: {
               'Content-Type': 'application/json'

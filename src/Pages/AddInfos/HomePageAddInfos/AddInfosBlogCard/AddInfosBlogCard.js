@@ -48,7 +48,7 @@ const AddInfosBlogCard = () => {
         console.log(image);
 
 
-        fetch(`http://localhost:2333/AddInfosBlogCard`, {
+        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosBlogCard`, {
             method:"POST",
             body: formData
         })

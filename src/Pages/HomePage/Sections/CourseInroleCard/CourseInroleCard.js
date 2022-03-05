@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import "./CourseInroleCard.css" ;
 import cardImg from "../../../../images/Home-img/course-thumbnails.png" ;
 import assignmentIcon from "../../../../images/Home-img/assignment.png" ;
@@ -6,16 +6,26 @@ import tutorialsIcon from "../../../../images/Home-img/tutorials.png" ;
 import workingIcon from "../../../../images/Home-img/working.png" ;
 
 const CourseInroleCard = () => {
+    
+    const [CIDCHs, setCIDCHs] = useState([]);
+    
+  // course Infos Dark Cards
+  useEffect(()=>{
+    fetch("https://blooming-island-64834.herokuapp.com/CIDCH")
+    .then(res => res.json())
+    .then(data => setCIDCHs(data))
+  },[]);
+
     return (
-        <div className="CC-card">
+        CIDCHs.map(CIDCH => <div className="CC-card">
             <div className="cardImg">
                 <img className="cardImages" src={cardImg} />
             </div>
 
             <div>
-                <h1 className="h1-text">Complete Web Development Course with Fardul Digonto</h1>
+                <h1 className="h1-text">{CIDCH.headline}</h1>
                 <h4 className="h4-text">
-                    Enjoy the most effective and enjoyable journey with interactive lessons and guided support to become a web developer.
+                    {CIDCH.subline}
                 </h4>
 
                 <div className="tips">
@@ -36,6 +46,7 @@ const CourseInroleCard = () => {
             </div>
         
         </div>
+        )
     );
 };
 

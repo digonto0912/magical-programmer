@@ -39,7 +39,7 @@ function Register() {
 
     const newUserInfo = {UserPhoneNumber, userName, email, pass, userPay, coursesNames};
     console.log("newUserInfo", newUserInfo)
-    fetch("http://localhost:2333/registation", {
+    fetch("https://blooming-island-64834.herokuapp.com/registation", {
       method:"POST",
       headers: {
         'Content-Type': 'application/json'
@@ -61,6 +61,7 @@ function Register() {
       // navigate
       if(Data.SG){
       Navigate("/");
+      document.location.reload(true);
       }
 
     });

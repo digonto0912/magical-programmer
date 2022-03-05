@@ -7,7 +7,7 @@ const AddInfosPaymentSystemRules = () => {
     const [PaymentSystemRules, setPaymentSystemRules] = useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:2333/AddInfosPaymentSystemRules/${id}`)
+        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosPaymentSystemRules/${id}`)
         .then(res => res.json())
         .then(data => setPaymentSystemRules(data))
     }, []);
@@ -27,7 +27,7 @@ const AddInfosPaymentSystemRules = () => {
 
     //submite
     const submit = e => {
-        fetch(`http://localhost:2333/AddInfosPaymentSystemRules`, {
+        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosPaymentSystemRules`, {
             method:"POST",
             headers: {
                 'Content-Type': 'application/json'

@@ -8,7 +8,7 @@ const UpdateCIC3Card1stApi = () => {
     const [image, setImage] = useState(null);
 
     useEffect(()=>{
-        fetch(`http://localhost:2333/UpdateCIC3Card1stApi/${id}`)
+        fetch(`https://blooming-island-64834.herokuapp.com/UpdateCIC3Card1stApi/${id}`)
         .then(res => res.json())
         .then(data => setCIC3Card1stApiData(data))
     }, []);
@@ -49,7 +49,7 @@ const UpdateCIC3Card1stApi = () => {
         console.log(image);
 
 
-        fetch(`http://localhost:2333/UpdateCIC3Card1stApi/${id}`, {
+        fetch(`https://blooming-island-64834.herokuapp.com/UpdateCIC3Card1stApi/${id}`, {
             method:"PUT",
             body: formData
         })
