@@ -39,7 +39,7 @@ const CourseInroleCard = () => {
                     </div>
                     <div>
                         <img className="tips-icon-3" src={workingIcon} />
-                         <b className="text">48+ pectice</b>
+                         <b className="text">48+ practice</b>
                     </div>
                 </div>
 

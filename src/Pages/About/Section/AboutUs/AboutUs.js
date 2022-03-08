@@ -5,9 +5,9 @@ const AboutUs = () => {
     return (
         <div className="AboutUs">
             <h1 className="AboutUs-text">
-                My About is,
+                My About,
                 <br />
-                Not a About without, YOU.....
+                Nothing but you..
 
                 <h4 className="AboutUs-true-text">
                     [ That's True ]

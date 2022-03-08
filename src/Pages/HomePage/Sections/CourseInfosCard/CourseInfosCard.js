@@ -5,14 +5,13 @@ import "./CourseInfosCard.css" ;
 const CourseInfosCard = () => {
 
     const [corse1Infos, setcorse1Infos] = useState([]);
+    const [corse2Infos, setcorse2Infos] = useState([]);
 
     useEffect(()=>{
         fetch("https://blooming-island-64834.herokuapp.com/CourseInfosApi1")
         .then(res => res.json())
         .then(data => setcorse1Infos(data))
     },[])
-
-    const [corse2Infos, setcorse2Infos] = useState([]);
 
     useEffect(()=>{
         fetch("https://blooming-island-64834.herokuapp.com/CourseInfosApi2")
@@ -30,7 +29,7 @@ const CourseInfosCard = () => {
                 </h5>
                 <Link to="/courses">
                 <button className="CIC-button">
-                Inrole now
+                    Enroll now
                 </button>
                 </Link>
             </div>
@@ -41,9 +40,9 @@ const CourseInfosCard = () => {
 
                 <div className="info-card">
                     <div className="info-up-card">
-                        <h3>course subida</h3>
+                        <h3>Course Advantage</h3>
                     <h5>
-                        course subidacourse subidacourse subidacourse subidacourse subida
+                        2 benefits to the full course
                     </h5>
                     {
                         corse1Infos.map(corse1Info => <>
@@ -65,10 +64,10 @@ const CourseInfosCard = () => {
 
                 <div className="info-card">
                     <div className="info-up-card">
-<h3>course subida</h3>
-                    <h5>
-                        course subidacourse subidacourse subidacourse subidacourse subida
-                    </h5>
+                        <h3>Course Advantage</h3>
+                        <h5>
+                            2 main targets to the full course
+                        </h5>
                     {
                         corse2Infos.map(corse2Info => <>
                         <div className="infos">

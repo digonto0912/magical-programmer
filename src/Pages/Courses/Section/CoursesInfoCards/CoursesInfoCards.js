@@ -99,7 +99,7 @@ const CoursesInfoCards = () => {
 
             {/* card 2 */}
             <div id="card2">
-                <div className="card-respon">
+                <div className="card-2-respon card-respon">
                 {
                     cards2ndsections.map(cards2ndsection => <div className="card-2">
                             <div className="number-div">

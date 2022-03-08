@@ -38,7 +38,7 @@ const Banner = () => {
                     {/* button */}
                     <Link to={"courses"}>
                     <button className="SL-btn">
-                        {startNow}<b>Start Learning</b>
+                        {startNow} <b>Start Now</b>
                     </button>
                     </Link>
 

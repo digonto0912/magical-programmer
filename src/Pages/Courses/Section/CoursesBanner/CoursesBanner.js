@@ -33,13 +33,13 @@ const CoursesBanner = () => {
                   <div className="carousel-text">
                     
                     <h1>
-                      Money Problem is a comone problem in this world and country
+                      Money problems are a common problem for us
                     </h1>
                     
                     <br />
 
-                    <h4>
-                      Money Problem is a comone problem in this world and country
+                    <h4 class="carousel-textH4">
+                    অর্থ সমস্যা আমাদের জন্য একটি সাধারণ সমস্যা। তাই সবার কথা বিবেচনা করে এই কোর্সটি এমনভাবে সাজানো হয়েছে যাতে সবাই তা গ্রহণ করতে পারে, এবং নিজেকে প্রতিষ্ঠিত করতে পারে।
                     </h4>
 
                     <br />
@@ -57,7 +57,7 @@ const CoursesBanner = () => {
                 <a href="/paymentPage" className="Course-SL-btn-a">
                     <button id="collectNowButton" className="Course-SL-btn">
                       <div className="d-flex justify-content-center align-items-center">
-                        Pay Now {collectNow}
+                        Enroll Now {collectNow}
                       </div>
                     </button>
                 </a>
@@ -75,13 +75,13 @@ const CoursesBanner = () => {
                   <div className="carousel-text">
                     
                     <h1>
-                      Money Problem is a comone problem in this world and country
+                      We want to extend a helping hand to everyone
                     </h1>
                     
                     <br />
-                    
-                    <h4>
-                      Money Problem is a comone problem in this world and country
+
+                    <h4 class="carousel-textH4">
+                      আমরা আমাদের এত বড়ো করতে চাই, যেন আমরা একদিন, একজন দিনমজুর এর জীবন কে ও সুন্দর করে গুছিয়ে দেওয়ার কারণ হতে পারি.
                     </h4>
                     
                     <br />
@@ -99,7 +99,7 @@ const CoursesBanner = () => {
                 <a href="/paymentPage" className="Course-SL-btn-a">
                     <button id="collectNowButton" className="Course-SL-btn">
                       <div className="d-flex justify-content-center align-items-center">
-                        Pay Now {collectNow}
+                        Enroll Now {collectNow}
                       </div>
                     </button>
                 </a>
@@ -117,13 +117,13 @@ const CoursesBanner = () => {
                   <div className="carousel-text carousel-3-text">
                     
                     <h1>
-                      Money Problem is a comone problem in this world and country
+                      Master everything you need to become a web developer.
                     </h1>
-                    
+
                     <br />
 
-                    <h4>
-                      Money Problem is a comone problem in this world and country
+                    <h4 class="carousel-textH4">
+                      ফ্রন্টএন্ড (HTML, CSS, JavaScript, ES6, bootstrap, React, charting), ব্যাকএন্ড (node, express, API), ডাটাবেজ (mongodb), ক্রোম ডেভ টুল, হোস্টিং, গিটহাব, ইন্টারভিউ প্রবলেম সলভিং - সবকিছু!
                     </h4>
                     
                     <br />
@@ -141,7 +141,7 @@ const CoursesBanner = () => {
                 <a href="/paymentPage" className="Course-SL-btn-a">
                     <button id="collectNowButton" className="Course-SL-btn">
                       <div className="d-flex justify-content-center align-items-center">
-                        Pay Now {collectNow}
+                        Enroll Now {collectNow}
                       </div>
                     </button>
                 </a>
@@ -159,13 +159,13 @@ const CoursesBanner = () => {
                   <div className="carousel-text">
                     
                     <h1>
-                      Money Problem is a comone problem in this world and country
+                      Complete Web Development Course with Fardul Digonto
                     </h1>
 
                     <br />
 
-                    <h4>
-                      Money Problem is a comone problem in this world and country
+                    <h4 class="carousel-textH4">
+                      একদম জিরো থেকে, কোন প্রকার পূর্ব অভিজ্ঞতা ছাড়াই একজন প্রফেশনাল ওয়েব ডেভেলপার হওয়ার জন্য যা যা লাগবে তার সবকিছুই সহজ করে গিলিয়ে খাওয়ানো হবে এই কোর্সে।
                     </h4>
                     
                     <br />
@@ -183,7 +183,7 @@ const CoursesBanner = () => {
                 <a href="/paymentPage" className="Course-SL-btn-a">
                     <button id="collectNowButton" className="Course-SL-btn">
                       <div className="d-flex justify-content-center align-items-center">
-                        Pay Now {collectNow}
+                        Enroll Now {collectNow}
                       </div>
                     </button>
                 </a>

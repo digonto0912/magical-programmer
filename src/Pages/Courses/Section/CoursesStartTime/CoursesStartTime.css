@@ -18,7 +18,7 @@
 .thumbImg > img{
     width: 400px;
     height: 284px;
-    border-radius: 10px;
+    border-radius: 1vw;
 }
 .CoursesStartTime-text{
     padding-left:50px;
@@ -77,6 +77,8 @@
     display: flex;
     border:none;
     display: inline;
+    margin-bottom:0;
+    margin-right:0;
 }
 .CST-Course-SL-btn:hover{
     background: linear-gradient(50deg, #ff006c, #a300c5, #000cc794);

@@ -35,6 +35,9 @@ margin-top:200px;
 .carousel-text > h1{
     font-family: 'Secular One', sans-serif;
 }
+.carousel-textH4{
+    font-size:15px;
+}
 
 /* all images */
 .carousel-img{
