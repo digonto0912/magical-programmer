@@ -13,12 +13,12 @@ const PaymentPage = () => {
     const [TTRCN, setTTRCN] = useState([]);
     
     useEffect(()=>{
-        fetch("https://blooming-island-64834.herokuapp.com/PaymentSystemRuls")
+        fetch("https://magical-programmer-server-from-git.onrender.com/PaymentSystemRuls")
         .then(res => res.json())
         .then(data => setPayRules(data))
     },[])
     useEffect(()=>{
-        fetch("https://blooming-island-64834.herokuapp.com/ThisTimeRunningCourseName")
+        fetch("https://magical-programmer-server-from-git.onrender.com/ThisTimeRunningCourseName")
         .then(res => res.json())
         .then(data => setTTRCN(data))
     },[])
@@ -49,7 +49,7 @@ const PaymentPage = () => {
         };
         console.log(bkashPaymentInfo);
 
-        fetch("https://blooming-island-64834.herokuapp.com/bkashPayment", {
+        fetch("https://magical-programmer-server-from-git.onrender.com/bkashPayment", {
             method:"POST", 
             headers: {
                 'Content-Type': 'application/json'

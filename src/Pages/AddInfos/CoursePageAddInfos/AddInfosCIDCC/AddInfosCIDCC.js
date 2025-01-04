@@ -7,7 +7,7 @@ const AddInfosCIDCC = () => {
     const [CIDCCData, setCIDCCData] = useState([]);
 
     useEffect(()=>{
-        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosCIDCC/${id}`)
+        fetch(`https://magical-programmer-server-from-git.onrender.com/AddInfosCIDCC/${id}`)
         .then(res => res.json())
         .then(data => setCIDCCData(data))
     }, []);
@@ -70,7 +70,7 @@ const AddInfosCIDCC = () => {
     
     //submit
     const submit = e => {
-        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosCIDCC/${id}`, {
+        fetch(`https://magical-programmer-server-from-git.onrender.com/AddInfosCIDCC/${id}`, {
             method:"PUT",
             headers: {
                 'Content-Type': 'application/json'

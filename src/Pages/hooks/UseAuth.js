@@ -16,7 +16,7 @@ const UseAuth = () => {
   
       if(email){
         // server
-        fetch("https://blooming-island-64834.herokuapp.com/auth", {
+        fetch("https://magical-programmer-server-from-git.onrender.com/auth", {
           method:"POST", 
           headers: {
               'Content-Type': 'application/json'

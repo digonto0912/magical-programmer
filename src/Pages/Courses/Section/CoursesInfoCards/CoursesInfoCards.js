@@ -7,7 +7,7 @@ const CoursesInfoCards = () => {
     const [cards1stsections, setcards1stsections] = useState([]);
 
     useEffect(()=>{
-        fetch("https://blooming-island-64834.herokuapp.com/CIC3Card1stApi")
+        fetch("https://magical-programmer-server-from-git.onrender.com/CIC3Card1stApi")
         .then(res => res.json())
         .then(data => setcards1stsections(data))
     },[]);
@@ -16,7 +16,7 @@ const CoursesInfoCards = () => {
     const [cards2ndsections, setcards2ndsections] = useState([]);
 
     useEffect(()=>{
-        fetch("https://blooming-island-64834.herokuapp.com/CIC3Card2ndApi")
+        fetch("https://magical-programmer-server-from-git.onrender.com/CIC3Card2ndApi")
         .then(res => res.json())
         .then(data => setcards2ndsections(data))
     },[]);
@@ -25,7 +25,7 @@ const CoursesInfoCards = () => {
     const [cards3rdsections, setcards3rdsections] = useState([]);
 
     useEffect(()=>{
-        fetch("https://blooming-island-64834.herokuapp.com/CIC3Card3rdApi")
+        fetch("https://magical-programmer-server-from-git.onrender.com/CIC3Card3rdApi")
         .then(res => res.json())
         .then(data => setcards3rdsections(data))
     },[]);

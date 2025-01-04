@@ -7,7 +7,7 @@ const AddInfosPaymentSystemRules = () => {
     const [PaymentSystemRules, setPaymentSystemRules] = useState([]);
 
     useEffect(()=>{
-        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosPaymentSystemRules/${id}`)
+        fetch(`https://magical-programmer-server-from-git.onrender.com/AddInfosPaymentSystemRules/${id}`)
         .then(res => res.json())
         .then(data => setPaymentSystemRules(data))
     }, []);
@@ -27,7 +27,7 @@ const AddInfosPaymentSystemRules = () => {
 
     //submite
     const submit = e => {
-        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosPaymentSystemRules`, {
+        fetch(`https://magical-programmer-server-from-git.onrender.com/AddInfosPaymentSystemRules`, {
             method:"POST",
             headers: {
                 'Content-Type': 'application/json'

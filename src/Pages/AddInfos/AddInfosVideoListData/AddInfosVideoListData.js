@@ -7,7 +7,7 @@ const AddInfosVideoListData = () => {
     const [VideoListData, setVideoListData] = useState([]);
 
     useEffect(()=>{
-        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosVideoListData/${id}`)
+        fetch(`https://magical-programmer-server-from-git.onrender.com/AddInfosVideoListData/${id}`)
         .then(res => res.json())
         .then(data => setVideoListData(data))
     }, []);
@@ -76,7 +76,7 @@ const AddInfosVideoListData = () => {
 
     //submite
     const submit = e => {
-        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosVideoListData`, {
+        fetch(`https://magical-programmer-server-from-git.onrender.com/AddInfosVideoListData`, {
             method:"POST",
             headers: {
                 'Content-Type': 'application/json'

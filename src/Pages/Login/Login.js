@@ -32,7 +32,7 @@ function Login() {
     
     const loginUserInfo = {email, pass};
   
-    fetch("https://blooming-island-64834.herokuapp.com/login", {
+    fetch("https://magical-programmer-server-from-git.onrender.com/login", {
       method:"POST",
       headers: {
         'Content-Type': 'application/json'

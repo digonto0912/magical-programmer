@@ -14,6 +14,6 @@ GitHub link: <a href="https://github.com/digonto0912/magical-programmer" target=
 </br>
 GitHub server: <a href="https://github.com/digonto0912/magical-programmer-server" target=_blank>Click Here</a> 
 </br>
-Heroku deploy: <a href="https://blooming-island-64834.herokuapp.com" target=_blank>Click Here</a>
+Heroku deploy: <a href="https://magical-programmer-server-from-git.onrender.com" target=_blank>Click Here</a>
 
 <p> And thanks for reading this full Text </p>

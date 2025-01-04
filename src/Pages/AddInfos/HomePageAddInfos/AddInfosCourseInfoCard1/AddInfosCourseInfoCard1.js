@@ -7,7 +7,7 @@ const AddInfosCourseInfoCard1 = () => {
     const [CourseInfoCard1, setCourseInfoCard1] = useState([]);
 
     useEffect(()=>{
-        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosCourseInfoCard1/${id}`)
+        fetch(`https://magical-programmer-server-from-git.onrender.com/AddInfosCourseInfoCard1/${id}`)
         .then(res => res.json())
         .then(data => setCourseInfoCard1(data))
     }, []);
@@ -40,7 +40,7 @@ const AddInfosCourseInfoCard1 = () => {
     }
     
     const submit = e => {
-        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosCourseInfoCard1`, {
+        fetch(`https://magical-programmer-server-from-git.onrender.com/AddInfosCourseInfoCard1`, {
             method:"POST",
             headers: {
                 'Content-Type': 'application/json'

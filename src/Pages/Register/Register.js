@@ -39,7 +39,7 @@ function Register() {
 
     const newUserInfo = {UserPhoneNumber, userName, email, pass, userPay, coursesNames};
     console.log("newUserInfo", newUserInfo)
-    fetch("https://blooming-island-64834.herokuapp.com/registation", {
+    fetch("https://magical-programmer-server-from-git.onrender.com/registation", {
       method:"POST",
       headers: {
         'Content-Type': 'application/json'

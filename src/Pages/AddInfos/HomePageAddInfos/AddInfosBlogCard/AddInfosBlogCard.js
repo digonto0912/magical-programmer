@@ -48,7 +48,7 @@ const AddInfosBlogCard = () => {
         console.log(image);
 
 
-        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosBlogCard`, {
+        fetch(`https://magical-programmer-server-from-git.onrender.com/AddInfosBlogCard`, {
             method:"POST",
             body: formData
         })

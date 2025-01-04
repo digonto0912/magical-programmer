@@ -11,7 +11,7 @@ const CoursesStartTime = () => {
     const [CIDCCs, setCIDCCs] = useState([]);
   
     useEffect(()=>{
-        fetch("https://blooming-island-64834.herokuapp.com/CIDCC")
+        fetch("https://magical-programmer-server-from-git.onrender.com/CIDCC")
         .then(res => res.json())
         .then(data => setCIDCCs(data))
     },[]);

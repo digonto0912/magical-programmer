@@ -6,7 +6,7 @@ const BlogsCards = () => {
     const [cardDatas, setcardDatas] = useState([]);
 
     useEffect(()=>{
-        fetch("https://blooming-island-64834.herokuapp.com/BlogsCardsApi")
+        fetch("https://magical-programmer-server-from-git.onrender.com/BlogsCardsApi")
         .then(res => res.json())
         .then(data => setcardDatas(data))
     },[]);

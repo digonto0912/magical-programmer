@@ -7,7 +7,7 @@ const UpdateCssDemoVideo = () => {
     const [CssDemoVideoData, setCssDemoVideoData] = useState([]);
 
     useEffect(()=>{
-        fetch(`https://blooming-island-64834.herokuapp.com/UpdateCssDemoVideo/${id}`)
+        fetch(`https://magical-programmer-server-from-git.onrender.com/UpdateCssDemoVideo/${id}`)
         .then(res => res.json())
         .then(data => setCssDemoVideoData(data))
     }, []);
@@ -47,7 +47,7 @@ const UpdateCssDemoVideo = () => {
     }
     
     const submit = e => {
-        fetch(`https://blooming-island-64834.herokuapp.com/UpdateCssDemoVideo/${id}`, {
+        fetch(`https://magical-programmer-server-from-git.onrender.com/UpdateCssDemoVideo/${id}`, {
             method:"PUT",
             headers: {
                 'Content-Type': 'application/json'

@@ -12,7 +12,7 @@ const CoursesCardPage = () => {
     const userCoursesCards = async() =>{
         const userEmail = await userInfo?.email;
         
-        fetch(`https://blooming-island-64834.herokuapp.com/CCI`, {
+        fetch(`https://magical-programmer-server-from-git.onrender.com/CCI`, {
             method:"POST",
             headers: {
                 'Content-Type': 'application/json'

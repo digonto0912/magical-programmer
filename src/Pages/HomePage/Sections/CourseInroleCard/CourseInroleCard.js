@@ -11,7 +11,7 @@ const CourseInroleCard = () => {
     
   // course Infos Dark Cards
   useEffect(()=>{
-    fetch("https://blooming-island-64834.herokuapp.com/CIDCH")
+    fetch("https://magical-programmer-server-from-git.onrender.com/CIDCH")
     .then(res => res.json())
     .then(data => setCIDCHs(data))
   },[]);

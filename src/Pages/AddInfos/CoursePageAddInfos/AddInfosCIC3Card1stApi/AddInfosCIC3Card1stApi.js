@@ -48,7 +48,7 @@ const AddInfosCIC3Card1stApi = () => {
         formData.append("img", image);
         console.log(image);
 
-        fetch(`https://blooming-island-64834.herokuapp.com/AddInfosCIC3Card1stApi`, {
+        fetch(`https://magical-programmer-server-from-git.onrender.com/AddInfosCIC3Card1stApi`, {
             method:"POST",
             body: formData
         })

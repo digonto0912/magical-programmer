@@ -7,7 +7,7 @@ const UpdateCIDCH = () => {
     const [CIDCHData, setCIDCHData] = useState([]);
 
     useEffect(()=>{
-        fetch(`https://blooming-island-64834.herokuapp.com/UpdateCIDCH/${id}`)
+        fetch(`https://magical-programmer-server-from-git.onrender.com/UpdateCIDCH/${id}`)
         .then(res => res.json())
         .then(data => setCIDCHData(data))
     }, []);
@@ -42,7 +42,7 @@ const UpdateCIDCH = () => {
     
     //submit
     const submit = e => {
-        fetch(`https://blooming-island-64834.herokuapp.com/UpdateCIDCH/${id}`, {
+        fetch(`https://magical-programmer-server-from-git.onrender.com/UpdateCIDCH/${id}`, {
             method:"PUT",
             headers: {
                 'Content-Type': 'application/json'

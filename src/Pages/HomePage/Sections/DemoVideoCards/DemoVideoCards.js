@@ -9,13 +9,13 @@ const DemoVideoCards = () => {
     const [CSSvideolists, setCSSvideoLists] = useState([]);
 
     useEffect(()=>{
-        fetch("https://blooming-island-64834.herokuapp.com/htmlDemoVideos")
+        fetch("https://magical-programmer-server-from-git.onrender.com/htmlDemoVideos")
         .then(res => res.json())
         .then(data => setHTMLvideoLists(data))
     },[]);
 
     useEffect(()=>{
-        fetch("https://blooming-island-64834.herokuapp.com/cssDemoVideos")
+        fetch("https://magical-programmer-server-from-git.onrender.com/cssDemoVideos")
         .then(res => res.json())
         .then(data => setCSSvideoLists(data))
     },[]);
