@@ -24,19 +24,8 @@ This project leverages the following technologies and tools:
 
 ## Project Links  
 
-- **Live Website**: [Click Here]("https://hungry-mestorf-d9b8c2.netlify.app/")  
+- **Live Website**: [Click Here](https://hungry-mestorf-d9b8c2.netlify.app/)  
 - **GitHub Repository (Frontend)**: [Click Here](https://github.com/digonto0912/magical-programmer)  
-- **GitHub Repository (Backend)**: [Click Here](https://github.com/digonto0912/magical-programmer-server)  
-- **Heroku Deployment**: [Click Here](https://magical-programmer-server-from-git.onrender.com)  
+- **GitHub Repository (Backend)**: [Click Here](https://github.com/digonto0912/magical-programmer-server)
 
 Thank you for taking the time to explore this project. Your feedback is appreciated!
-
-Live link: <a href="https://hungry-mestorf-d9b8c2.netlify.app/" target=_blank>Click Here</a> 
-</br>
-GitHub link: <a href="https://github.com/digonto0912/magical-programmer" target=_blank>Click Here</a> 
-</br>
-GitHub server: <a href="https://github.com/digonto0912/magical-programmer-server" target=_blank>Click Here</a> 
-</br>
-Heroku deploy: <a href="https://magical-programmer-server-from-git.onrender.com" target=_blank>Click Here</a>
-
-<p> And thanks for reading this full Text </p>
