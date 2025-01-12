@@ -24,7 +24,7 @@ This project leverages the following technologies and tools:
 
 ## Project Links  
 
-- **Live Website**: [Click Here](https://hungry-mestorf-d9b8c2.netlify.app/)  
+- **Live Website**: [Click Here](https://magical-programmer.netlify.app/)  
 - **GitHub Repository (Frontend)**: [Click Here](https://github.com/digonto0912/magical-programmer)  
 - **GitHub Repository (Backend)**: [Click Here](https://github.com/digonto0912/magical-programmer-server)
 
